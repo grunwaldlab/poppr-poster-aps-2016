@@ -12,20 +12,22 @@
 #'
 #' Data Setup and Import
 #' ---------------------
-#+ setup, cache = TRUE
-library('vcfR')
-library('poppr')
-library('readr')
-library('tidyr')
-library('purrr')
-library('ggplot2')
+#+ setup, message = FALSE
+library('vcfR')    # Reading in VCF file and conversion to genlight
+library('poppr')   # multilocus genotype and linkage analysis
+library('readr')   # reading in tsv file
+library('tidyr')   # creating tidy data
+library('purrr')   # manipulating lists
+library('dplyr')   # manipulating data frames
+library('knitr')   # printing tables
+library('ggplot2') # plotting cool graphics
 rubfrag <- read.vcfR('TASSEL_GBS0077_dp_filtered.vcf.gz', verbose = FALSE)
 (rfstrata <- read_tsv("rub_frag_strata.txt"))
 (rf.sc <- rubfrag %>% vcfR2genlight() %>% as.snpclone())
 #'
 #' Since there are 40 entries in the strata and 41 in the VCF file, we're going
 #' to only include the samples that are present in the strata.
-rf.sc <- rf.sc[indNames(rf.sc) %in% rfstrata$VCF_ID]
+rf.sc <- rf.sc[indNames(rf.sc) %in% rfstrata$VCF_ID, ]
 strata(rf.sc) <- rfstrata[match(indNames(rf.sc), rfstrata$VCF_ID), ]
 setPop(rf.sc) <- ~State
 rf.sc
@@ -39,10 +41,18 @@ rf.sc
 #' to pass to the cutoff predictor which will find the largest gap in the data
 #' and create a cutoff within that gap.
 rf.filter <- filter_stats(rf.sc, plot = TRUE)
-(rf.cutoff <- cutoff_predictor(rf.filter$farthest$THRESHOLDS))
+
+# predict cutoff for each algorithm
+rf.cutoff <- rf.filter %>%
+  transpose() %>%        # Transpose the data
+  as_data_frame() %>%    # into a data frame and then
+  select(THRESHOLDS) %>% # get the thresholds,
+  flatten() %>%          # flatten to a list of nearest, farthest, and average and
+  map_dbl(cutoff_predictor, 0.75)  # calculate the cutoff for
+rf.cutoff
 #'
 #' Now that we have the cutoff set, I can filter the data.
-mlg.filter(rf.sc) <- rf.cutoff
+mlg.filter(rf.sc) <- rf.cutoff["farthest"]
 rf.sc
 #'
 #' To get a sense of the distribution of the MLGs, we should create a table
@@ -51,6 +61,25 @@ rf.tab <- mlg.table(rf.sc)
 #' To avoid issues with other analyses, we'll stick to the OR, WA, and CA
 #' populations since they have more than 2 individuals.
 rf.cow <- popsub(rf.sc, sublist = c("OR", "WA", "CA"))
+#'
+#' Diveristy analysis
+#' ------------------
+#'
+#' We'll do an analysis of genotypic diversity for our populations using the
+#' function `diversity_ci()`. It should be noted that the confidence intervals
+#' are adjusted.
+#+ mlg_diversity, cache = TRUE
+rf.div <- diversity_ci(rf.cow, n = 1e4,
+                       parallel = "multicore", ncpus = 4L, raw = FALSE)
+kable(rf.div, digits = 2)
+#'
+#' We can also do a rarefaction of these stats.
+#'
+#+ mlg_rarefy, cache = TRUE
+rf.rare <- diversity_ci(rf.cow, n = 1e4, rarefy = TRUE,
+                        parallel = "multicore", ncpus = 4L, raw = FALSE)
+kable(rf.rare, digits = 2)
+#'
 #'
 #' Index of Association ($\bar{r}_d$)
 #' ----------------------------------
@@ -63,17 +92,26 @@ rf.cow <- popsub(rf.sc, sublist = c("OR", "WA", "CA"))
 #'
 #' Here I've chosen to do **1000** replicates with **500** SNPs for each
 #' population and the total data set.
-#+ ia_analysis, cache=TRUE, results = "hide"
+#+ ia_analysis, cache = TRUE, results = "hide"
 set.seed(20160718)
 rf.ia <- seppop(rf.cow) %>% # separate each population
-	c(Total = rf.cow) %>%     # add the total population
-	lapply(samp.ia, threads = 0, n.snp = 500L, reps = 1000L) %>%
-	data.frame %>%    # convert list to data frame w/ 1000 rows
-	gather(state, Ia) # convert to long, tidy data
-
-ggplot(rf.ia, aes(x = state, y = Ia)) +
-	geom_boxplot() +
-	theme_bw() +
-	ggtitle(expression(paste(bar(r)[d], " per population sampled over 500 SNPs"))) +
-	ylab(expression(bar(r)[d]))
-
+  c(Total = rf.cow) %>%     # add the total population
+  lapply(samp.ia, threads = 0, n.snp = 500L, reps = 1000L) %>%
+  data.frame %>%    # convert list to data frame w/ 1000 rows
+  gather(state, value) # convert to long, tidy data
+#'
+#'
+head(rf.ia)
+ggplot(rf.ia, aes(x = state, y = value)) +
+  geom_boxplot() +
+  theme_bw() +
+  theme(panel.grid.major.x = element_blank()) +
+  theme(text = element_text(size = 18)) +
+  ggtitle(expression(paste(bar(r)[d], " per population sampled over 500 SNPs")))
+#'
+#'
+#' Session Information
+#' ===================
+#'
+options(width = 100)
+devtools::session_info()
