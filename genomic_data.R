@@ -156,5 +156,5 @@ compoplot(rf.dapc, col = PAL)
 #' Session Information
 #' ===================
 #'
-options(width = 100)
+if (!interactive()) options(width = 100)
 devtools::session_info()
