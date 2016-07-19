@@ -1,5 +1,12 @@
-#' Example of genomic data in R
-#' ============================
+#' ---
+#' title: "Example of genomic data in R"
+#' author: "Zhian N. Kamvar, Jonah C. Brooks, and Niklaus J. Grünwald"
+#' output:
+#'  html_document:
+#'    keep_md: true
+#'    toc: true
+#' ---
+#'
 #'
 #' I've taken the example data from https://github.com/knausb/vcfR_class/ and
 #' ran it through
@@ -41,6 +48,7 @@ rf.sc
 #' algorithms across all distance thresholds. I use the output of that function
 #' to pass to the cutoff predictor which will find the largest gap in the data
 #' and create a cutoff within that gap.
+#'
 rf.filter <- filter_stats(rf.sc, plot = TRUE)
 rug(bitwise.dist(rf.sc, percent = TRUE), col = "#4D4D4D80")
 # predict cutoff for each algorithm
