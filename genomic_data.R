@@ -13,6 +13,7 @@
 #' Data Setup and Import
 #' ---------------------
 #+ setup, message = FALSE
+library('ape')
 library('vcfR')    # Reading in VCF file and conversion to genlight
 library('poppr')   # multilocus genotype and linkage analysis
 library('readr')   # reading in tsv file
@@ -41,7 +42,7 @@ rf.sc
 #' to pass to the cutoff predictor which will find the largest gap in the data
 #' and create a cutoff within that gap.
 rf.filter <- filter_stats(rf.sc, plot = TRUE)
-
+rug(bitwise.dist(rf.sc, percent = TRUE), col = "#4D4D4D80")
 # predict cutoff for each algorithm
 rf.cutoff <- rf.filter %>%
   transpose() %>%        # Transpose the data
@@ -110,6 +111,40 @@ ggplot(rf.ia, aes(x = state, y = value)) +
   ggtitle(expression(paste(bar(r)[d], " per population sampled over 500 SNPs")))
 #'
 #'
+#' Minimum Spanning Network
+#' ------------------------
+#'
+rf.cow_dist <- bitwise.dist(rf.cow, percent = TRUE, mat = FALSE,
+                            missing_match = TRUE, differences_only = FALSE,
+                            threads = 0)
+min_span_net <- poppr.msn(rf.cow, rf.cow_dist, showplot = FALSE,
+                          include.ties = TRUE,
+                          threshold = rf.cutoff["farthest"],
+                          clustering.algorithm = "farthest")
+
+set.seed(70)
+PAL <- setNames(RColorBrewer::brewer.pal(3, "Set2"), popNames(rf.cow))
+plot_poppr_msn(rf.cow,
+               min_span_net,
+               inds = "none",
+               mlg = TRUE,
+               gadj = 6,
+               nodebase = 1.15,
+               palette = PAL,
+               cutoff = NULL,
+               quantiles = FALSE,
+               beforecut = TRUE,
+               vertex.label.font = 2)
+#'
+#'
+#' Discriminant Analysis of Principle Components
+#' ---------------------------------------------
+#'
+#+ dapc, cache = TRUE
+rf.dapc <- dapc(rf.cow[order(pop(rf.cow))], n.pca = 12, n.da = 2)
+#'
+scatter.dapc(rf.dapc, col = PAL)
+compoplot(rf.dapc, col = PAL)
 #' Session Information
 #' ===================
 #'
