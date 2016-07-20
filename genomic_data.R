@@ -163,7 +163,6 @@ ggplot(rf.ia, aes(x = state, y = value)) +
   theme(text = element_text(size = 18)) +
   ggtitle(expression(paste(bar(r)[d], " per population sampled over 500 SNPs")))
 #'
-#'
 #' Minimum Spanning Network
 #' ------------------------
 #'

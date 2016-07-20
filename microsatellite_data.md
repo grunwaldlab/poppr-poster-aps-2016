@@ -64,6 +64,34 @@ library('dplyr')
 ```
 
 ```r
+library('ggtree')
+```
+
+```
+## Loading required package: ggplot2
+```
+
+```
+## Warning: namespace 'EBImage' is not available and has been replaced
+## by .GlobalEnv when processing object 'plot.index'
+
+## Warning: namespace 'EBImage' is not available and has been replaced
+## by .GlobalEnv when processing object 'plot.index'
+```
+
+```
+## 
+## Attaching package: 'ggtree'
+```
+
+```
+## The following object is masked from 'package:dplyr':
+## 
+##     collapse
+```
+
+```r
+library('ggrepel')
 library('ggplot2')
 library('RColorBrewer')
 data(Pinf)
@@ -169,6 +197,57 @@ Pinf
 ```
 
 
+
+#' Bootstrap analysis
+------------------
+
+
+```r
+pboot <- bruvo.boot(Pinf, replen = pinfreps, sample = 100, loss = FALSE,
+                    showtree = FALSE, cutoff = 75)
+```
+
+```r
+ptree   <- apeBoot(pboot, pboot$node.label)
+pstrata <- data_frame(taxa = indNames(Pinf)) %>%
+  bind_cols(strata(Pinf)) %>%
+  as.data.frame()
+gt <- ggtree(ptree, layout = "circular") +
+  geom_label_repel(aes(label = bootstrap, size = bootstrap),
+                   nudge_x = -0.015, nudge_y = -0.005) +
+  scale_size(range = c(2, 4))
+gt <- gt %<+% pstrata +
+  geom_tippoint(aes(color = Country), size = 3) +
+  theme_tree2() +
+  theme(legend.position = "right") +
+  scale_color_manual(values = CountryPAL) +
+  theme(text = element_text(size = 18))
+gt
+```
+
+```
+## Warning: Removed 161 rows containing missing values (geom_label_repel).
+```
+
+```
+## Warning in min(x): no non-missing arguments to min; returning Inf
+```
+
+```
+## Warning in max(x): no non-missing arguments to max; returning -Inf
+```
+
+```
+## Warning in min(x): no non-missing arguments to min; returning Inf
+```
+
+```
+## Warning in max(x): no non-missing arguments to max; returning -Inf
+```
+
+![](microsatellite_data_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+
+
 Minimum Spanning Network
 ------------------------
 
@@ -195,7 +274,7 @@ plot_poppr_msn(Pinf,
                layfun = igraph::layout_with_kk)
 ```
 
-![](microsatellite_data_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+![](microsatellite_data_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
 
 Here's the original network
 
@@ -219,7 +298,7 @@ plot_poppr_msn(Pinf,
                layfun = igraph::layout_with_kk)
 ```
 
-![](microsatellite_data_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
+![](microsatellite_data_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
 
 Session Information
 ===================
@@ -256,6 +335,8 @@ devtools::session_info()
 ##  adegenet     * 2.0.1       2016-02-15 CRAN (R 3.3.0)                  
 ##  ape            3.5         2016-05-24 CRAN (R 3.3.0)                  
 ##  assertthat     0.1         2013-12-06 CRAN (R 3.2.0)                  
+##  BiocGenerics   0.16.1      2015-11-06 Bioconductor                    
+##  Biostrings     2.38.4      2016-02-09 Bioconductor                    
 ##  boot           1.3-18      2016-02-23 CRAN (R 3.2.3)                  
 ##  cluster        2.0.4       2016-04-18 CRAN (R 3.3.0)                  
 ##  coda           0.18-1      2015-10-16 CRAN (R 3.2.0)                  
@@ -270,13 +351,18 @@ devtools::session_info()
 ##  formatR        1.4         2016-05-09 CRAN (R 3.3.0)                  
 ##  gdata          2.17.0      2015-07-04 CRAN (R 3.2.0)                  
 ##  ggplot2      * 2.1.0       2016-03-01 CRAN (R 3.3.0)                  
+##  ggrepel      * 0.5         2016-02-08 CRAN (R 3.3.0)                  
+##  ggtree       * 1.2.17      2016-03-12 Bioconductor                    
 ##  gmodels        2.16.2      2015-07-22 CRAN (R 3.2.0)                  
 ##  gtable         0.2.0       2016-02-26 CRAN (R 3.2.3)                  
 ##  gtools         3.5.0       2015-05-29 CRAN (R 3.2.0)                  
 ##  htmltools      0.3.5       2016-03-21 CRAN (R 3.2.4)                  
 ##  httpuv         1.3.3       2015-08-04 CRAN (R 3.2.0)                  
 ##  igraph         1.0.1       2015-06-26 CRAN (R 3.2.0)                  
+##  IRanges        2.4.8       2016-02-26 Bioconductor                    
+##  jsonlite       1.0         2016-07-01 cran (@1.0)                     
 ##  knitr          1.13        2016-05-09 CRAN (R 3.3.0)                  
+##  labeling       0.3         2014-08-23 CRAN (R 3.2.0)                  
 ##  lattice        0.20-33     2015-07-14 CRAN (R 3.2.0)                  
 ##  lazyeval       0.2.0.9000  2016-07-01 Github (hadley/lazyeval@c155c3d)
 ##  LearnBayes     2.15        2014-05-29 CRAN (R 3.2.0)                  
@@ -301,6 +387,7 @@ devtools::session_info()
 ##  Rcpp           0.12.6      2016-07-19 CRAN (R 3.3.0)                  
 ##  reshape2       1.4.1       2014-12-06 CRAN (R 3.2.0)                  
 ##  rmarkdown      1.0         2016-07-08 cran (@1.0)                     
+##  S4Vectors      0.8.11      2016-01-29 Bioconductor                    
 ##  scales         0.4.0       2016-02-26 CRAN (R 3.2.3)                  
 ##  seqinr         3.3-0       2016-07-19 CRAN (R 3.3.0)                  
 ##  shiny          0.13.2.9004 2016-06-23 Github (rstudio/shiny@bf52075)  
@@ -309,15 +396,18 @@ devtools::session_info()
 ##  stringi        1.1.1       2016-05-27 CRAN (R 3.3.0)                  
 ##  stringr        1.0.0       2015-04-30 CRAN (R 3.2.0)                  
 ##  tibble         1.1         2016-07-04 CRAN (R 3.3.0)                  
+##  tidyr          0.5.1       2016-06-14 cran (@0.5.1)                   
 ##  vegan          2.4-0       2016-06-15 CRAN (R 3.3.0)                  
 ##  withr          1.0.2       2016-06-20 cran (@1.0.2)                   
 ##  xtable         1.8-2       2016-02-05 CRAN (R 3.2.3)                  
-##  yaml           2.1.13      2014-06-12 CRAN (R 3.2.0)
+##  XVector        0.10.0      2015-10-14 Bioconductor                    
+##  yaml           2.1.13      2014-06-12 CRAN (R 3.2.0)                  
+##  zlibbioc       1.16.0      2015-10-14 Bioconductor
 ```
 
 
 ---
 title: "microsatellite_data.R"
 author: "zhian"
-date: "Wed Jul 20 11:48:49 2016"
+date: "Wed Jul 20 12:31:35 2016"
 ---

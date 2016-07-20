@@ -16,6 +16,8 @@
 library('poppr')
 library('purrr')
 library('dplyr')
+library('ggtree')
+library('ggrepel')
 library('ggplot2')
 library('RColorBrewer')
 data(Pinf)
@@ -59,6 +61,29 @@ pinf.cutoff <- pinf.filter %>%
 
 mlg.filter(Pinf, dist = bruvo.dist, replen = pinfreps, loss = FALSE) <- pinf.cutoff["farthest"]
 Pinf
+#'
+#'
+#'#' Bootstrap analysis
+#' ------------------
+#+ pinfboot, results = "hide", cache = TRUE
+pboot <- bruvo.boot(Pinf, replen = pinfreps, sample = 100, loss = FALSE,
+                    showtree = FALSE, cutoff = 75)
+#+ fig.height = 10
+ptree   <- apeBoot(pboot, pboot$node.label)
+pstrata <- data_frame(taxa = indNames(Pinf)) %>%
+  bind_cols(strata(Pinf)) %>%
+  as.data.frame()
+gt <- ggtree(ptree, layout = "circular") +
+  geom_label_repel(aes(label = bootstrap, size = bootstrap),
+                   nudge_x = -0.015, nudge_y = -0.005) +
+  scale_size(range = c(2, 4))
+gt <- gt %<+% pstrata +
+  geom_tippoint(aes(color = Country), size = 3) +
+  theme_tree2() +
+  theme(legend.position = "right") +
+  scale_color_manual(values = CountryPAL) +
+  theme(text = element_text(size = 18))
+gt
 #'
 #' Minimum Spanning Network
 #' ------------------------
