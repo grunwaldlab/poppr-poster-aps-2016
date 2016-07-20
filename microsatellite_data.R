@@ -16,7 +16,6 @@
 library('poppr')
 library('purrr')
 library('dplyr')
-library('igraph')
 library('ggplot2')
 library('RColorBrewer')
 data(Pinf)
@@ -26,10 +25,28 @@ pinfreps <- c(Pi02 = 2, D13 = 2, Pi33 = 6, Pi04 = 2, Pi4B = 2, Pi16 = 2,
               G11 = 2, Pi56 = 2, Pi63 = 3, Pi70 = 3, Pi89 = 2)
 pinfreps <- fix_replen(Pinf, pinfreps)
 Pinf
+ContinentPAL <- setNames(c("firebrick", "blue"), popNames(Pinf))
+setPop(Pinf) <- ~Country
+CountryPAL   <- setNames(RColorBrewer::brewer.pal(4, "Set3"), popNames(Pinf))
 #'
+#' One of the first things to do in an analysis of microsatellite data is to
+#' ensure that the we have provide enough information to accurately call
+#' multilocus genotypes.
+#+ gac, results = "hide", fig.show = "hide"
+genotype_curve(Pinf, sample = 1e4)
+gcp <- last_plot()
 #'
-#' The
-pinf.bd <- bruvo.dist(Pinf, replen = pinfreps, add = TRUE, loss = FALSE)
+gcp +
+  theme_bw() +
+  geom_smooth(aes(group = 1)) +
+  theme(text = element_text(size = 18)) +
+  theme(panel.grid.major.x = element_blank()) +
+  ggtitle(expression(paste(italic("P. infestans"), " genotype accumulation curve")))
+#' The data that we have is mixed diploid and polyploid microsatellite markers.
+#' This means that we should use Bruvo's distance, which accounts for ploidy.
+#' Here, I'm using the genome addition model to calculate the distance. First,
+#' I'm going to filter the multilocus genotypes.
+pinf.bd     <- bruvo.dist(Pinf, replen = pinfreps, add = TRUE, loss = FALSE)
 pinf.filter <- filter_stats(Pinf, dist = pinf.bd, plot = TRUE)
 rug(pinf.bd, col = "#4D4D4D80")
 
@@ -40,13 +57,37 @@ pinf.cutoff <- pinf.filter %>%
   flatten() %>%          # flatten to a list of nearest, farthest, and average and
   map_dbl(cutoff_predictor)  # calculate the cutoff for
 
-setPop(Pinf) <- ~Country
 mlg.filter(Pinf, dist = bruvo.dist, replen = pinfreps, loss = FALSE) <- pinf.cutoff["farthest"]
-min_span_net <- bruvo.msn(Pinf, replen = pinfreps, add = TRUE, loss = FALSE,
+Pinf
+#'
+#' Minimum Spanning Network
+#' ------------------------
+#'
+#' I'm using the filtered genotypes for this analysis.
+#+ fig.width = 9, fig.height = 10
+fmin_span_net <- bruvo.msn(Pinf, replen = pinfreps, add = TRUE, loss = FALSE,
                           showplot = FALSE,
                           include.ties = TRUE,
                           threshold = pinf.cutoff["farthest"],
                           clustering.algorithm = "farthest_neighbor")
+set.seed(69)
+plot_poppr_msn(Pinf,
+               fmin_span_net,
+               inds = "none",
+               mlg = FALSE,
+               gadj = 2,
+               nodebase = 1.15,
+               palette = CountryPAL,
+               cutoff = NULL,
+               quantiles = FALSE,
+               beforecut = TRUE,
+               layfun = igraph::layout_with_kk)
+#' Here's the original network
+#+ fig.width = 9, fig.height = 10
+mll(Pinf) <- "original"
+min_span_net <- bruvo.msn(Pinf, replen = pinfreps, add = TRUE, loss = FALSE,
+                          showplot = FALSE,
+                          include.ties = TRUE)
 set.seed(69)
 plot_poppr_msn(Pinf,
                min_span_net,
@@ -54,11 +95,11 @@ plot_poppr_msn(Pinf,
                mlg = FALSE,
                gadj = 2,
                nodebase = 1.15,
-               palette = RColorBrewer::brewer.pal(4, "Set1"),
+               palette = CountryPAL,
                cutoff = NULL,
                quantiles = FALSE,
                beforecut = TRUE,
-               layfun = layout_with_kk)
+               layfun = igraph::layout_with_kk)
 #' Session Information
 #' ===================
 #'
