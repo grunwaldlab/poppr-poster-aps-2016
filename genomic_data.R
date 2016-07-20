@@ -20,7 +20,7 @@
 #' Data Setup and Import
 #' ---------------------
 #+ setup, message = FALSE
-library('ape')
+library('ape')     # Creating a tree
 library('vcfR')    # Reading in VCF file and conversion to genlight
 library('poppr')   # multilocus genotype and linkage analysis
 library('readr')   # reading in tsv file
@@ -28,7 +28,9 @@ library('tidyr')   # creating tidy data
 library('purrr')   # manipulating lists
 library('dplyr')   # manipulating data frames
 library('knitr')   # printing tables
+library('ggtree')  # plotting trees
 library('ggplot2') # plotting cool graphics
+library('ggrepel') # repelling bootstrap labels
 rubfrag <- read.vcfR('TASSEL_GBS0077_dp_filtered.vcf.gz', verbose = FALSE)
 (rfstrata <- read_tsv("rub_frag_strata.txt"))
 (rf.sc <- rubfrag %>% vcfR2genlight() %>% as.snpclone())
@@ -39,6 +41,7 @@ rf.sc <- rf.sc[indNames(rf.sc) %in% rfstrata$VCF_ID, ]
 strata(rf.sc) <- rfstrata[match(indNames(rf.sc), rfstrata$VCF_ID), ]
 setPop(rf.sc) <- ~State
 rf.sc
+PAL <- setNames(RColorBrewer::brewer.pal(nPop(rf.sc), "Set2"), popNames(rf.sc))
 #'
 #' ### Filtering
 #'
@@ -70,6 +73,47 @@ rf.tab <- mlg.table(rf.sc)
 #' To avoid issues with other analyses, we'll stick to the OR, WA, and CA
 #' populations since they have more than 2 individuals.
 rf.cow <- popsub(rf.sc, sublist = c("OR", "WA", "CA"))
+#'
+#' Poor Man's Jackknife
+#' --------------------
+#'
+#' Bootstrapping 43K snps can be done with the `aboot()` function, but here, we
+#' are using a jacknife approach with 20 samples of 500 SNPs at a time. This is
+#' a similar process that happens internally with `aboot()`, but instead of
+#' rebuilding a matrix of 43K SNPs after randomly sampling with replacement, we
+#' are sampling 500 SNPs without replacement and calculating a tree off of
+#' those.
+#'
+#' This will give us a measure of the internal consistency of the data.
+#'
+#+ tree, cache = TRUE
+rf.tree <- phangorn::upgma(bitwise.dist(rf.sc))
+set.seed(20160719)
+sample_fun   <- function(i) seploc(rf.sc, block = 500, random = TRUE) %>% sample(10)
+rf.sc.trees <- lapply(1:20, sample_fun) %>%
+  flatten() %>%
+  lapply(bitwise.dist) %>%
+  lapply(phangorn::upgma)
+nodelabs <- prop.clades(rf.tree, rf.sc.trees, rooted = TRUE)/2
+nodelabs[nodelabs < 75] <- NA
+rf.tree$node.label <- nodelabs
+#'
+#'
+#' Now, I'm going to plot the tree using the *ggtree* package from Bioconductor
+#' and the *ggrepel* package for the bootstrap labels.
+rf.treeb <- apeBoot(rf.tree, nodelabs)
+rf.strata <- strata(rf.sc) %>% rename(taxa = VCF_ID)
+gt <- ggtree(rf.treeb) +
+  geom_label_repel(aes(label = bootstrap, size = bootstrap),
+                   nudge_x = -0.005, nudge_y = -0.005) +
+  scale_size(range = c(2, 4))
+gt <- gt %<+% rf.strata +
+  geom_tippoint(aes(color = State), size = 3) +
+  theme_tree2() +
+  theme(legend.position = "right") +
+  scale_color_manual(values = PAL) +
+  theme(text = element_text(size = 18))
+gt
 #'
 #' Diveristy analysis
 #' ------------------
@@ -131,7 +175,6 @@ min_span_net <- poppr.msn(rf.cow, rf.cow_dist, showplot = FALSE,
                           clustering.algorithm = "farthest")
 
 set.seed(70)
-PAL <- setNames(RColorBrewer::brewer.pal(3, "Set2"), popNames(rf.cow))
 plot_poppr_msn(rf.cow,
                min_span_net,
                inds = "none",

@@ -16,7 +16,7 @@ Data Setup and Import
 
 
 ```r
-library('ape')
+library('ape')     # Creating a tree
 library('vcfR')    # Reading in VCF file and conversion to genlight
 library('poppr')   # multilocus genotype and linkage analysis
 library('readr')   # reading in tsv file
@@ -24,7 +24,20 @@ library('tidyr')   # creating tidy data
 library('purrr')   # manipulating lists
 library('dplyr')   # manipulating data frames
 library('knitr')   # printing tables
+library('ggtree')  # plotting trees
+```
+
+```
+## Warning: namespace 'EBImage' is not available and has been replaced
+## by .GlobalEnv when processing object 'plot.index'
+
+## Warning: namespace 'EBImage' is not available and has been replaced
+## by .GlobalEnv when processing object 'plot.index'
+```
+
+```r
 library('ggplot2') # plotting cool graphics
+library('ggrepel') # repelling bootstrap labels
 rubfrag <- read.vcfR('TASSEL_GBS0077_dp_filtered.vcf.gz', verbose = FALSE)
 (rfstrata <- read_tsv("rub_frag_strata.txt"))
 ```
@@ -106,6 +119,10 @@ rf.sc
 ##    @pop: population of each individual (group size range: 1-15)
 ##    @strata: a data frame with 4 columns ( VCF_ID, Country, State, Nursery )
 ##    @other: a list containing: elements without names
+```
+
+```r
+PAL <- setNames(RColorBrewer::brewer.pal(nPop(rf.sc), "Set2"), popNames(rf.sc))
 ```
 
 
@@ -192,6 +209,62 @@ populations since they have more than 2 individuals.
 ```r
 rf.cow <- popsub(rf.sc, sublist = c("OR", "WA", "CA"))
 ```
+
+
+Poor Man's Jackknife
+--------------------
+
+Bootstrapping 43K snps can be done with the `aboot()` function, but here, we
+are using a jacknife approach with 20 samples of 500 SNPs at a time. This is
+a similar process that happens internally with `aboot()`, but instead of
+rebuilding a matrix of 43K SNPs after randomly sampling with replacement, we
+are sampling 500 SNPs without replacement and calculating a tree off of
+those.
+
+This will give us a measure of the internal consistency of the data.
+
+
+
+```r
+rf.tree <- phangorn::upgma(bitwise.dist(rf.sc))
+set.seed(20160719)
+sample_fun   <- function(i) seploc(rf.sc, block = 500, random = TRUE) %>% sample(10)
+rf.sc.trees <- lapply(1:20, sample_fun) %>%
+  flatten() %>%
+  lapply(bitwise.dist) %>%
+  lapply(phangorn::upgma)
+nodelabs <- prop.clades(rf.tree, rf.sc.trees, rooted = TRUE)/2
+nodelabs[nodelabs < 75] <- NA
+rf.tree$node.label <- nodelabs
+```
+
+
+
+Now, I'm going to plot the tree using the *ggtree* package from Bioconductor
+and the *ggrepel* package for the bootstrap labels.
+
+
+```r
+rf.treeb <- apeBoot(rf.tree, nodelabs)
+rf.strata <- strata(rf.sc) %>% rename(taxa = VCF_ID)
+gt <- ggtree(rf.treeb) +
+  geom_label_repel(aes(label = bootstrap, size = bootstrap),
+                   nudge_x = -0.005, nudge_y = -0.005) +
+  scale_size(range = c(2, 4))
+gt <- gt %<+% rf.strata +
+  geom_tippoint(aes(color = State), size = 3) +
+  theme_tree2() +
+  theme(legend.position = "right") +
+  scale_color_manual(values = PAL) +
+  theme(text = element_text(size = 18))
+gt
+```
+
+```
+## Warning: Removed 63 rows containing missing values (geom_label_repel).
+```
+
+![](genomic_data_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
 
 
 Diveristy analysis
@@ -313,7 +386,7 @@ ggplot(rf.ia, aes(x = state, y = value)) +
   ggtitle(expression(paste(bar(r)[d], " per population sampled over 500 SNPs")))
 ```
 
-![](genomic_data_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
+![](genomic_data_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
 
 
 
@@ -332,7 +405,6 @@ min_span_net <- poppr.msn(rf.cow, rf.cow_dist, showplot = FALSE,
                           clustering.algorithm = "farthest")
 
 set.seed(70)
-PAL <- setNames(RColorBrewer::brewer.pal(3, "Set2"), popNames(rf.cow))
 plot_poppr_msn(rf.cow,
                min_span_net,
                inds = "none",
@@ -346,7 +418,7 @@ plot_poppr_msn(rf.cow,
                vertex.label.font = 2)
 ```
 
-![](genomic_data_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
+![](genomic_data_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
 
 
 
@@ -366,13 +438,13 @@ rf.dapc <- dapc(rf.cow[order(pop(rf.cow))], n.pca = 12, n.da = 2)
 scatter.dapc(rf.dapc, col = PAL)
 ```
 
-![](genomic_data_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
+![](genomic_data_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
 
 ```r
 compoplot(rf.dapc, col = PAL)
 ```
 
-![](genomic_data_files/figure-html/unnamed-chunk-8-2.png)<!-- -->
+![](genomic_data_files/figure-html/unnamed-chunk-9-2.png)<!-- -->
 
 Session Information
 ===================
@@ -380,7 +452,7 @@ Session Information
 
 
 ```r
-options(width = 100)
+if (!interactive()) options(width = 100)
 devtools::session_info()
 ```
 
@@ -396,7 +468,7 @@ devtools::session_info()
 ##  language (EN)                        
 ##  collate  en_US.UTF-8                 
 ##  tz       America/Los_Angeles         
-##  date     2016-07-19
+##  date     2016-07-20
 ```
 
 ```
@@ -409,10 +481,11 @@ devtools::session_info()
 ##  adegenet     * 2.0.1       2016-02-15 CRAN (R 3.3.0)                  
 ##  ape          * 3.5         2016-05-24 CRAN (R 3.3.0)                  
 ##  assertthat     0.1         2013-12-06 CRAN (R 3.2.0)                  
+##  BiocGenerics   0.16.1      2015-11-06 Bioconductor                    
+##  Biostrings     2.38.4      2016-02-09 Bioconductor                    
 ##  boot           1.3-18      2016-02-23 CRAN (R 3.2.3)                  
 ##  cluster        2.0.4       2016-04-18 CRAN (R 3.3.0)                  
 ##  coda           0.18-1      2015-10-16 CRAN (R 3.2.0)                  
-##  codetools      0.2-14      2015-07-15 CRAN (R 3.2.0)                  
 ##  colorspace     1.2-6       2015-03-11 CRAN (R 3.2.0)                  
 ##  DBI            0.4-1       2016-05-08 CRAN (R 3.3.0)                  
 ##  deldir         0.1-12      2016-03-06 CRAN (R 3.2.4)                  
@@ -424,13 +497,16 @@ devtools::session_info()
 ##  formatR        1.4         2016-05-09 CRAN (R 3.3.0)                  
 ##  gdata          2.17.0      2015-07-04 CRAN (R 3.2.0)                  
 ##  ggplot2      * 2.1.0       2016-03-01 CRAN (R 3.3.0)                  
+##  ggrepel      * 0.5         2016-02-08 CRAN (R 3.3.0)                  
+##  ggtree       * 1.2.17      2016-03-12 Bioconductor                    
 ##  gmodels        2.16.2      2015-07-22 CRAN (R 3.2.0)                  
 ##  gtable         0.2.0       2016-02-26 CRAN (R 3.2.3)                  
 ##  gtools         3.5.0       2015-05-29 CRAN (R 3.2.0)                  
-##  highr          0.6         2016-05-09 CRAN (R 3.3.0)                  
 ##  htmltools      0.3.5       2016-03-21 CRAN (R 3.2.4)                  
 ##  httpuv         1.3.3       2015-08-04 CRAN (R 3.2.0)                  
 ##  igraph         1.0.1       2015-06-26 CRAN (R 3.2.0)                  
+##  IRanges        2.4.8       2016-02-26 Bioconductor                    
+##  jsonlite       1.0         2016-07-01 cran (@1.0)                     
 ##  knitr        * 1.13        2016-05-09 CRAN (R 3.3.0)                  
 ##  labeling       0.3         2014-08-23 CRAN (R 3.2.0)                  
 ##  lattice        0.20-33     2015-07-14 CRAN (R 3.2.0)                  
@@ -448,7 +524,7 @@ devtools::session_info()
 ##  nnls           1.4         2012-03-19 CRAN (R 3.2.0)                  
 ##  pegas          0.9         2016-04-16 CRAN (R 3.2.5)                  
 ##  permute        0.9-0       2016-01-24 CRAN (R 3.2.3)                  
-##  phangorn       2.0.3       2016-05-01 CRAN (R 3.2.5)                  
+##  phangorn       2.0.4       2016-06-21 CRAN (R 3.3.0)                  
 ##  pinfsc50       1.0.0       2016-01-29 CRAN (R 3.2.3)                  
 ##  plyr           1.8.4       2016-06-08 CRAN (R 3.3.0)                  
 ##  poppr        * 2.2.0       2016-06-13 CRAN (R 3.3.1)                  
@@ -456,12 +532,13 @@ devtools::session_info()
 ##  quadprog       1.5-5       2013-04-17 CRAN (R 3.2.0)                  
 ##  R6             2.1.2       2016-01-26 CRAN (R 3.2.3)                  
 ##  RColorBrewer   1.1-2       2014-12-07 CRAN (R 3.2.0)                  
-##  Rcpp           0.12.5      2016-05-14 CRAN (R 3.3.0)                  
+##  Rcpp           0.12.6      2016-07-19 CRAN (R 3.3.0)                  
 ##  readr        * 0.2.2       2015-10-22 CRAN (R 3.2.0)                  
 ##  reshape2       1.4.1       2014-12-06 CRAN (R 3.2.0)                  
 ##  rmarkdown      1.0         2016-07-08 cran (@1.0)                     
+##  S4Vectors      0.8.11      2016-01-29 Bioconductor                    
 ##  scales         0.4.0       2016-02-26 CRAN (R 3.2.3)                  
-##  seqinr         3.1-5       2016-06-08 CRAN (R 3.3.0)                  
+##  seqinr         3.3-0       2016-07-19 CRAN (R 3.3.0)                  
 ##  shiny          0.13.2.9004 2016-06-23 Github (rstudio/shiny@bf52075)  
 ##  sp             1.2-3       2016-04-14 CRAN (R 3.3.0)                  
 ##  spdep          0.6-5       2016-06-02 CRAN (R 3.3.0)                  
@@ -470,16 +547,18 @@ devtools::session_info()
 ##  tibble         1.1         2016-07-04 CRAN (R 3.3.0)                  
 ##  tidyr        * 0.5.1       2016-06-14 cran (@0.5.1)                   
 ##  vcfR         * 1.1.0.9000  2016-07-19 Github (knausb/vcfR@4dd2d13)    
-##  vegan          2.3-5       2016-04-09 CRAN (R 3.2.4)                  
+##  vegan          2.4-0       2016-06-15 CRAN (R 3.3.0)                  
 ##  viridisLite    0.1.3       2016-03-12 CRAN (R 3.2.4)                  
 ##  withr          1.0.2       2016-06-20 cran (@1.0.2)                   
 ##  xtable         1.8-2       2016-02-05 CRAN (R 3.2.3)                  
-##  yaml           2.1.13      2014-06-12 CRAN (R 3.2.0)
+##  XVector        0.10.0      2015-10-14 Bioconductor                    
+##  yaml           2.1.13      2014-06-12 CRAN (R 3.2.0)                  
+##  zlibbioc       1.16.0      2015-10-14 Bioconductor
 ```
 
 
 ---
 title: "genomic_data.R"
 author: "zhian"
-date: "Tue Jul 19 14:44:35 2016"
+date: "Wed Jul 20 10:59:51 2016"
 ---
