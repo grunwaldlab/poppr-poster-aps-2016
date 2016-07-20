@@ -411,11 +411,11 @@ ggia
 ![](genomic_data_files/figure-html/iasave-1.png)<!-- -->
 
 ```r
-ggsave(ggia, filename = "genomic_data_files/ia.svg")
+ggsave(ggia, filename = "genomic_data_files/ia.svg", scale = 1.2)
 ```
 
 ```
-## Saving 7 x 5 in image
+## Saving 8.4 x 6 in image
 ```
 
 
@@ -598,5 +598,5 @@ devtools::session_info()
 ---
 title: "genomic_data.R"
 author: "zhian"
-date: "Wed Jul 20 13:59:37 2016"
+date: "Wed Jul 20 14:13:55 2016"
 ---

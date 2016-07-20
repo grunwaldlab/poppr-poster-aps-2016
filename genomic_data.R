@@ -171,7 +171,7 @@ ggia <- ggplot(rf.ia, aes(x = state, y = value)) +
   theme(text = element_text(size = 18)) +
   ggtitle(expression(paste(bar(r)[d], " per population sampled over 500 SNPs")))
 ggia
-ggsave(ggia, filename = "genomic_data_files/ia.svg")
+ggsave(ggia, filename = "genomic_data_files/ia.svg", scale = 1.2)
 #'
 #' Minimum Spanning Network
 #' ------------------------
