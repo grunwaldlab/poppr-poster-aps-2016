@@ -1,3 +1,18 @@
+#' ---
+#' title: "Example of polyploid, clonal, microsatellite data in R"
+#' author: "Zhian N. Kamvar, Jonah C. Brooks, and Niklaus J. Grünwald"
+#' output:
+#'  html_document:
+#'    keep_md: true
+#'    toc: true
+#' ---
+#'
+#' The purpose of this analysis is to investigate the population structure of
+#' *Phytophthora infestans* from North America and South America using the data
+#' from Goss *et al.*, 2014.
+#'
+#' Data Setup and Import
+#' ---------------------
 library('poppr')
 library('purrr')
 library('dplyr')
@@ -5,9 +20,15 @@ library('igraph')
 library('ggplot2')
 library('RColorBrewer')
 data(Pinf)
+Pinf <- Pinf %>%
+  recode_polyploids(newploidy = TRUE)
 pinfreps <- c(Pi02 = 2, D13 = 2, Pi33 = 6, Pi04 = 2, Pi4B = 2, Pi16 = 2,
               G11 = 2, Pi56 = 2, Pi63 = 3, Pi70 = 3, Pi89 = 2)
 pinfreps <- fix_replen(Pinf, pinfreps)
+Pinf
+#'
+#'
+#' The
 pinf.bd <- bruvo.dist(Pinf, replen = pinfreps, add = TRUE, loss = FALSE)
 pinf.filter <- filter_stats(Pinf, dist = pinf.bd, plot = TRUE)
 rug(pinf.bd, col = "#4D4D4D80")
@@ -38,3 +59,8 @@ plot_poppr_msn(Pinf,
                quantiles = FALSE,
                beforecut = TRUE,
                layfun = layout_with_kk)
+#' Session Information
+#' ===================
+#'
+if (!interactive()) options(width = 100)
+devtools::session_info()
