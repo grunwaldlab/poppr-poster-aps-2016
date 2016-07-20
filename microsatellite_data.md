@@ -122,7 +122,7 @@ Pinf
 ```r
 ContinentPAL <- setNames(c("firebrick", "blue"), popNames(Pinf))
 setPop(Pinf) <- ~Country
-CountryPAL   <- setNames(RColorBrewer::brewer.pal(4, "Set3"), popNames(Pinf))
+CountryPAL   <- setNames(RColorBrewer::brewer.pal(4, "Dark2"), popNames(Pinf))
 ```
 
 
@@ -198,7 +198,7 @@ Pinf
 
 
 
-#' Bootstrap analysis
+Bootstrap analysis
 ------------------
 
 
@@ -206,6 +206,9 @@ Pinf
 pboot <- bruvo.boot(Pinf, replen = pinfreps, sample = 100, loss = FALSE,
                     showtree = FALSE, cutoff = 75)
 ```
+
+
+
 
 ```r
 ptree   <- apeBoot(pboot, pboot$node.label)
@@ -218,31 +221,10 @@ gt <- ggtree(ptree, layout = "circular") +
   scale_size(range = c(2, 4))
 gt <- gt %<+% pstrata +
   geom_tippoint(aes(color = Country), size = 3) +
-  theme_tree2() +
   theme(legend.position = "right") +
   scale_color_manual(values = CountryPAL) +
   theme(text = element_text(size = 18))
 gt
-```
-
-```
-## Warning: Removed 161 rows containing missing values (geom_label_repel).
-```
-
-```
-## Warning in min(x): no non-missing arguments to min; returning Inf
-```
-
-```
-## Warning in max(x): no non-missing arguments to max; returning -Inf
-```
-
-```
-## Warning in min(x): no non-missing arguments to min; returning Inf
-```
-
-```
-## Warning in max(x): no non-missing arguments to max; returning -Inf
 ```
 
 ![](microsatellite_data_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
@@ -409,5 +391,5 @@ devtools::session_info()
 ---
 title: "microsatellite_data.R"
 author: "zhian"
-date: "Wed Jul 20 12:31:35 2016"
+date: "Wed Jul 20 12:59:57 2016"
 ---

@@ -29,7 +29,7 @@ pinfreps <- fix_replen(Pinf, pinfreps)
 Pinf
 ContinentPAL <- setNames(c("firebrick", "blue"), popNames(Pinf))
 setPop(Pinf) <- ~Country
-CountryPAL   <- setNames(RColorBrewer::brewer.pal(4, "Set3"), popNames(Pinf))
+CountryPAL   <- setNames(RColorBrewer::brewer.pal(4, "Dark2"), popNames(Pinf))
 #'
 #' One of the first things to do in an analysis of microsatellite data is to
 #' ensure that the we have provide enough information to accurately call
@@ -63,12 +63,13 @@ mlg.filter(Pinf, dist = bruvo.dist, replen = pinfreps, loss = FALSE) <- pinf.cut
 Pinf
 #'
 #'
-#'#' Bootstrap analysis
+#' Bootstrap analysis
 #' ------------------
 #+ pinfboot, results = "hide", cache = TRUE
 pboot <- bruvo.boot(Pinf, replen = pinfreps, sample = 100, loss = FALSE,
                     showtree = FALSE, cutoff = 75)
-#+ fig.height = 10
+#'
+#+ warning = FALSE, fig.height = 9, fig.width = 10
 ptree   <- apeBoot(pboot, pboot$node.label)
 pstrata <- data_frame(taxa = indNames(Pinf)) %>%
   bind_cols(strata(Pinf)) %>%
@@ -79,7 +80,6 @@ gt <- ggtree(ptree, layout = "circular") +
   scale_size(range = c(2, 4))
 gt <- gt %<+% pstrata +
   geom_tippoint(aes(color = Country), size = 3) +
-  theme_tree2() +
   theme(legend.position = "right") +
   scale_color_manual(values = CountryPAL) +
   theme(text = element_text(size = 18))
