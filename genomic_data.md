@@ -378,6 +378,7 @@ head(rf.ia)
 ```
 
 ```r
+rf.ia$state <- factor(rf.ia$state, levels = c("OR", "WA", "CA", "Total"))
 ggplot(rf.ia, aes(x = state, y = value)) +
   geom_boxplot() +
   theme_bw() +
@@ -560,5 +561,5 @@ devtools::session_info()
 ---
 title: "genomic_data.R"
 author: "zhian"
-date: "Wed Jul 20 10:59:51 2016"
+date: "Wed Jul 20 11:44:31 2016"
 ---

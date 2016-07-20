@@ -155,6 +155,7 @@ rf.ia <- seppop(rf.cow) %>% # separate each population
 #'
 #'
 head(rf.ia)
+rf.ia$state <- factor(rf.ia$state, levels = c("OR", "WA", "CA", "Total"))
 ggplot(rf.ia, aes(x = state, y = value)) +
   geom_boxplot() +
   theme_bw() +
