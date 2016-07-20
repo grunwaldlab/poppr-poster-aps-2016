@@ -144,6 +144,14 @@ rug(bitwise.dist(rf.sc, percent = TRUE), col = "#4D4D4D80")
 
 ![](genomic_data_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
 
+```
+## quartz_off_screen 
+##                 2
+```
+
+
+
+
 ```r
 # predict cutoff for each algorithm
 rf.cutoff <- rf.filter %>%
@@ -199,7 +207,7 @@ To get a sense of the distribution of the MLGs, we should create a table
 rf.tab <- mlg.table(rf.sc)
 ```
 
-![](genomic_data_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+![](genomic_data_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
 
 
 To avoid issues with other analyses, we'll stick to the OR, WA, and CA
@@ -264,7 +272,19 @@ gt
 ## Warning: Removed 63 rows containing missing values (geom_label_repel).
 ```
 
-![](genomic_data_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
+![](genomic_data_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
+
+```r
+ggsave(gt, filename = "genomic_data_files/tree.svg")
+```
+
+```
+## Saving 7 x 5 in image
+```
+
+```
+## Warning: Removed 63 rows containing missing values (geom_label_repel).
+```
 
 
 Diveristy analysis
@@ -379,16 +399,24 @@ head(rf.ia)
 
 ```r
 rf.ia$state <- factor(rf.ia$state, levels = c("OR", "WA", "CA", "Total"))
-ggplot(rf.ia, aes(x = state, y = value)) +
+ggia <- ggplot(rf.ia, aes(x = state, y = value)) +
   geom_boxplot() +
   theme_bw() +
   theme(panel.grid.major.x = element_blank()) +
   theme(text = element_text(size = 18)) +
   ggtitle(expression(paste(bar(r)[d], " per population sampled over 500 SNPs")))
+ggia
 ```
 
-![](genomic_data_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
+![](genomic_data_files/figure-html/iasave-1.png)<!-- -->
 
+```r
+ggsave(ggia, filename = "genomic_data_files/ia.svg")
+```
+
+```
+## Saving 7 x 5 in image
+```
 
 
 Minimum Spanning Network
@@ -419,8 +447,15 @@ plot_poppr_msn(rf.cow,
                vertex.label.font = 2)
 ```
 
-![](genomic_data_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
+![](genomic_data_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
 
+
+
+
+```
+## quartz_off_screen 
+##                 2
+```
 
 
 Discriminant Analysis of Principle Components
@@ -439,13 +474,13 @@ rf.dapc <- dapc(rf.cow[order(pop(rf.cow))], n.pca = 12, n.da = 2)
 scatter.dapc(rf.dapc, col = PAL)
 ```
 
-![](genomic_data_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
+![](genomic_data_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
 
 ```r
 compoplot(rf.dapc, col = PAL)
 ```
 
-![](genomic_data_files/figure-html/unnamed-chunk-9-2.png)<!-- -->
+![](genomic_data_files/figure-html/unnamed-chunk-10-2.png)<!-- -->
 
 Session Information
 ===================
@@ -497,6 +532,7 @@ devtools::session_info()
 ##  fastmatch      1.0-4       2012-01-21 CRAN (R 3.2.0)                  
 ##  formatR        1.4         2016-05-09 CRAN (R 3.3.0)                  
 ##  gdata          2.17.0      2015-07-04 CRAN (R 3.2.0)                  
+##  gdtools      * 0.0.7       2016-02-16 CRAN (R 3.2.3)                  
 ##  ggplot2      * 2.1.0       2016-03-01 CRAN (R 3.3.0)                  
 ##  ggrepel      * 0.5         2016-02-08 CRAN (R 3.3.0)                  
 ##  ggtree       * 1.2.17      2016-03-12 Bioconductor                    
@@ -545,6 +581,7 @@ devtools::session_info()
 ##  spdep          0.6-5       2016-06-02 CRAN (R 3.3.0)                  
 ##  stringi        1.1.1       2016-05-27 CRAN (R 3.3.0)                  
 ##  stringr        1.0.0       2015-04-30 CRAN (R 3.2.0)                  
+##  svglite        1.1.0       2016-02-09 CRAN (R 3.3.0)                  
 ##  tibble         1.1         2016-07-04 CRAN (R 3.3.0)                  
 ##  tidyr        * 0.5.1       2016-06-14 cran (@0.5.1)                   
 ##  vcfR         * 1.1.0.9000  2016-07-19 Github (knausb/vcfR@4dd2d13)    
@@ -561,5 +598,5 @@ devtools::session_info()
 ---
 title: "genomic_data.R"
 author: "zhian"
-date: "Wed Jul 20 11:44:31 2016"
+date: "Wed Jul 20 13:59:37 2016"
 ---

@@ -44,6 +44,7 @@ gcp +
   theme(text = element_text(size = 18)) +
   theme(panel.grid.major.x = element_blank()) +
   ggtitle(expression(paste(italic("P. infestans"), " genotype accumulation curve")))
+ggsave(filename = "microsatellite_data_files/gac.svg", scale = 1.2)
 #' The data that we have is mixed diploid and polyploid microsatellite markers.
 #' This means that we should use Bruvo's distance, which accounts for ploidy.
 #' Here, I'm using the genome addition model to calculate the distance. First,
@@ -51,7 +52,13 @@ gcp +
 pinf.bd     <- bruvo.dist(Pinf, replen = pinfreps, add = TRUE, loss = FALSE)
 pinf.filter <- filter_stats(Pinf, dist = pinf.bd, plot = TRUE)
 rug(pinf.bd, col = "#4D4D4D80")
-
+#'
+#+ echo = FALSE
+svglite::svglite(file="microsatellite_data_files/filter.svg", width = 10, height = 6)
+pinf.filter <- filter_stats(Pinf, dist = pinf.bd, plot = TRUE)
+rug(pinf.bd, col = "#4D4D4D80")
+dev.off()
+#'
 pinf.cutoff <- pinf.filter %>%
   transpose() %>%        # Transpose the data
   as_data_frame() %>%    # into a data frame and then
@@ -84,12 +91,13 @@ gt <- gt %<+% pstrata +
   scale_color_manual(values = CountryPAL) +
   theme(text = element_text(size = 18))
 gt
+ggsave(gt, filename = "microsatellite_data_files/tree.svg")
 #'
 #' Minimum Spanning Network
 #' ------------------------
 #'
 #' I'm using the filtered genotypes for this analysis.
-#+ fig.width = 9, fig.height = 10
+#+ fminspan, fig.width = 9, fig.height = 10
 fmin_span_net <- bruvo.msn(Pinf, replen = pinfreps, add = TRUE, loss = FALSE,
                           showplot = FALSE,
                           include.ties = TRUE,
@@ -108,7 +116,7 @@ plot_poppr_msn(Pinf,
                beforecut = TRUE,
                layfun = igraph::layout_with_kk)
 #' Here's the original network
-#+ fig.width = 9, fig.height = 10
+#+ minspan, fig.width = 9, fig.height = 10
 mll(Pinf) <- "original"
 min_span_net <- bruvo.msn(Pinf, replen = pinfreps, add = TRUE, loss = FALSE,
                           showplot = FALSE,
@@ -125,6 +133,38 @@ plot_poppr_msn(Pinf,
                quantiles = FALSE,
                beforecut = TRUE,
                layfun = igraph::layout_with_kk)
+#'
+#+ echo = FALSE, results = "hide", fig.width = 9, fig.height = 10
+svglite::svglite(file="microsatellite_data_files/fminspan.svg", width = 9, height = 10)
+set.seed(69)
+mll(Pinf) <- "contracted"
+plot_poppr_msn(Pinf,
+               fmin_span_net,
+               inds = "none",
+               mlg = FALSE,
+               gadj = 2,
+               nodebase = 1.15,
+               palette = CountryPAL,
+               cutoff = NULL,
+               quantiles = FALSE,
+               beforecut = TRUE,
+               layfun = igraph::layout_with_kk)
+dev.off()
+svglite::svglite(file="microsatellite_data_files/minspan.svg", width = 9, height = 10)
+set.seed(69)
+mll(Pinf) <- "original"
+plot_poppr_msn(Pinf,
+               min_span_net,
+               inds = "none",
+               mlg = FALSE,
+               gadj = 2,
+               nodebase = 1.15,
+               palette = CountryPAL,
+               cutoff = NULL,
+               quantiles = FALSE,
+               beforecut = TRUE,
+               layfun = igraph::layout_with_kk)
+dev.off()
 #' Session Information
 #' ===================
 #'

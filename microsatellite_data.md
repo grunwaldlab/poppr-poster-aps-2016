@@ -153,6 +153,14 @@ gcp +
 
 ![](microsatellite_data_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
 
+```r
+ggsave(filename = "microsatellite_data_files/gac.svg", scale = 1.2)
+```
+
+```
+## Saving 8.4 x 6 in image
+```
+
 The data that we have is mixed diploid and polyploid microsatellite markers.
 This means that we should use Bruvo's distance, which accounts for ploidy.
 Here, I'm using the genome addition model to calculate the distance. First,
@@ -166,6 +174,17 @@ rug(pinf.bd, col = "#4D4D4D80")
 ```
 
 ![](microsatellite_data_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
+
+
+
+
+```
+## quartz_off_screen 
+##                 2
+```
+
+
+
 
 ```r
 pinf.cutoff <- pinf.filter %>%
@@ -227,7 +246,15 @@ gt <- gt %<+% pstrata +
 gt
 ```
 
-![](microsatellite_data_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+![](microsatellite_data_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
+
+```r
+ggsave(gt, filename = "microsatellite_data_files/tree.svg")
+```
+
+```
+## Saving 10 x 9 in image
+```
 
 
 Minimum Spanning Network
@@ -256,7 +283,7 @@ plot_poppr_msn(Pinf,
                layfun = igraph::layout_with_kk)
 ```
 
-![](microsatellite_data_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
+![](microsatellite_data_files/figure-html/fminspan-1.png)<!-- -->
 
 Here's the original network
 
@@ -280,7 +307,11 @@ plot_poppr_msn(Pinf,
                layfun = igraph::layout_with_kk)
 ```
 
-![](microsatellite_data_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
+![](microsatellite_data_files/figure-html/minspan-1.png)<!-- -->
+
+
+
+
 
 Session Information
 ===================
@@ -332,6 +363,7 @@ devtools::session_info()
 ##  fastmatch      1.0-4       2012-01-21 CRAN (R 3.2.0)                  
 ##  formatR        1.4         2016-05-09 CRAN (R 3.3.0)                  
 ##  gdata          2.17.0      2015-07-04 CRAN (R 3.2.0)                  
+##  gdtools      * 0.0.7       2016-02-16 CRAN (R 3.2.3)                  
 ##  ggplot2      * 2.1.0       2016-03-01 CRAN (R 3.3.0)                  
 ##  ggrepel      * 0.5         2016-02-08 CRAN (R 3.3.0)                  
 ##  ggtree       * 1.2.17      2016-03-12 Bioconductor                    
@@ -377,6 +409,7 @@ devtools::session_info()
 ##  spdep          0.6-5       2016-06-02 CRAN (R 3.3.0)                  
 ##  stringi        1.1.1       2016-05-27 CRAN (R 3.3.0)                  
 ##  stringr        1.0.0       2015-04-30 CRAN (R 3.2.0)                  
+##  svglite        1.1.0       2016-02-09 CRAN (R 3.3.0)                  
 ##  tibble         1.1         2016-07-04 CRAN (R 3.3.0)                  
 ##  tidyr          0.5.1       2016-06-14 cran (@0.5.1)                   
 ##  vegan          2.4-0       2016-06-15 CRAN (R 3.3.0)                  
@@ -391,5 +424,5 @@ devtools::session_info()
 ---
 title: "microsatellite_data.R"
 author: "zhian"
-date: "Wed Jul 20 12:59:57 2016"
+date: "Wed Jul 20 13:51:20 2016"
 ---

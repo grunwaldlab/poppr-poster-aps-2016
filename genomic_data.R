@@ -54,6 +54,12 @@ PAL <- setNames(RColorBrewer::brewer.pal(nPop(rf.sc), "Set2"), popNames(rf.sc))
 #'
 rf.filter <- filter_stats(rf.sc, plot = TRUE)
 rug(bitwise.dist(rf.sc, percent = TRUE), col = "#4D4D4D80")
+#+ echo = FALSE
+svglite::svglite(file="genomic_data_files//filter.svg", width = 10, height = 6)
+rf.filter <- filter_stats(rf.sc, plot = TRUE)
+rug(bitwise.dist(rf.sc, percent = TRUE), col = "#4D4D4D80")
+dev.off()
+#'
 # predict cutoff for each algorithm
 rf.cutoff <- rf.filter %>%
   transpose() %>%        # Transpose the data
@@ -114,6 +120,7 @@ gt <- gt %<+% rf.strata +
   scale_color_manual(values = PAL) +
   theme(text = element_text(size = 18))
 gt
+ggsave(gt, filename = "genomic_data_files/tree.svg")
 #'
 #' Diveristy analysis
 #' ------------------
@@ -154,14 +161,17 @@ rf.ia <- seppop(rf.cow) %>% # separate each population
   gather(state, value) # convert to long, tidy data
 #'
 #'
+#+ iasave
 head(rf.ia)
 rf.ia$state <- factor(rf.ia$state, levels = c("OR", "WA", "CA", "Total"))
-ggplot(rf.ia, aes(x = state, y = value)) +
+ggia <- ggplot(rf.ia, aes(x = state, y = value)) +
   geom_boxplot() +
   theme_bw() +
   theme(panel.grid.major.x = element_blank()) +
   theme(text = element_text(size = 18)) +
   ggtitle(expression(paste(bar(r)[d], " per population sampled over 500 SNPs")))
+ggia
+ggsave(ggia, filename = "genomic_data_files/ia.svg")
 #'
 #' Minimum Spanning Network
 #' ------------------------
@@ -187,6 +197,21 @@ plot_poppr_msn(rf.cow,
                beforecut = TRUE,
                vertex.label.font = 2)
 #'
+#+ msn_save, echo = FALSE
+svglite::svglite(file="genomic_data_files/fminspan.svg", width = 9, height = 10)
+set.seed(70)
+plot_poppr_msn(rf.cow,
+               min_span_net,
+               inds = "none",
+               mlg = TRUE,
+               gadj = 6,
+               nodebase = 1.15,
+               palette = PAL,
+               cutoff = NULL,
+               quantiles = FALSE,
+               beforecut = TRUE,
+               vertex.label.font = 2)
+dev.off()
 #'
 #' Discriminant Analysis of Principle Components
 #' ---------------------------------------------
