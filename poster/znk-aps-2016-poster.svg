@@ -1220,9 +1220,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.6"
-     inkscape:cx="1730.8285"
-     inkscape:cy="169.54751"
+     inkscape:zoom="0.25"
+     inkscape:cx="1422.123"
+     inkscape:cy="1643.363"
      inkscape:document-units="in"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -36891,7 +36891,7 @@
        id="rect105128" />
     <g
        id="g171795"
-       transform="translate(0,-100)">
+       transform="translate(0,-99.999987)">
       <g
          transform="translate(2458.1315,-1916.6203)"
          id="g105284"
