@@ -54,7 +54,7 @@ pinf.filter <- filter_stats(Pinf, dist = pinf.bd, plot = TRUE)
 rug(pinf.bd, col = "#4D4D4D80")
 #'
 #+ echo = FALSE
-svglite::svglite(file="microsatellite_data_files/filter.svg", width = 10, height = 6)
+svglite::svglite(file="microsatellite_data_files/filter.svg", width = 10, height = 8, pointsize = 20)
 pinf.filter <- filter_stats(Pinf, dist = pinf.bd, plot = TRUE)
 rug(pinf.bd, col = "#4D4D4D80")
 dev.off()

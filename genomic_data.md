@@ -428,10 +428,35 @@ Minimum Spanning Network
 rf.cow_dist <- bitwise.dist(rf.cow, percent = TRUE, mat = FALSE,
                             missing_match = TRUE, differences_only = FALSE,
                             threads = 0)
-min_span_net <- poppr.msn(rf.cow, rf.cow_dist, showplot = FALSE,
+fmin_span_net <- poppr.msn(rf.cow, rf.cow_dist, showplot = FALSE,
                           include.ties = TRUE,
                           threshold = rf.cutoff["farthest"],
                           clustering.algorithm = "farthest")
+
+set.seed(70)
+plot_poppr_msn(rf.cow,
+               fmin_span_net,
+               inds = "none",
+               mlg = TRUE,
+               gadj = 6,
+               nodebase = 1.15,
+               palette = PAL,
+               cutoff = NULL,
+               quantiles = FALSE,
+               beforecut = TRUE,
+               vertex.label.font = 2)
+```
+
+![](genomic_data_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
+
+
+Without collapsing
+
+
+```r
+mll(rf.cow) <- "original"
+min_span_net <- poppr.msn(rf.cow, rf.cow_dist, showplot = FALSE,
+                          include.ties = TRUE)
 
 set.seed(70)
 plot_poppr_msn(rf.cow,
@@ -447,7 +472,7 @@ plot_poppr_msn(rf.cow,
                vertex.label.font = 2)
 ```
 
-![](genomic_data_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
+![](genomic_data_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
 
 
 
@@ -474,13 +499,13 @@ rf.dapc <- dapc(rf.cow[order(pop(rf.cow))], n.pca = 12, n.da = 2)
 scatter.dapc(rf.dapc, col = PAL)
 ```
 
-![](genomic_data_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
+![](genomic_data_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
 
 ```r
 compoplot(rf.dapc, col = PAL)
 ```
 
-![](genomic_data_files/figure-html/unnamed-chunk-10-2.png)<!-- -->
+![](genomic_data_files/figure-html/unnamed-chunk-11-2.png)<!-- -->
 
 Session Information
 ===================
@@ -598,5 +623,5 @@ devtools::session_info()
 ---
 title: "genomic_data.R"
 author: "zhian"
-date: "Wed Jul 20 14:13:55 2016"
+date: "Wed Jul 20 16:26:50 2016"
 ---

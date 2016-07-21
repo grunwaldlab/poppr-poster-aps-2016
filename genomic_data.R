@@ -55,7 +55,7 @@ PAL <- setNames(RColorBrewer::brewer.pal(nPop(rf.sc), "Set2"), popNames(rf.sc))
 rf.filter <- filter_stats(rf.sc, plot = TRUE)
 rug(bitwise.dist(rf.sc, percent = TRUE), col = "#4D4D4D80")
 #+ echo = FALSE
-svglite::svglite(file="genomic_data_files//filter.svg", width = 10, height = 6)
+svglite::svglite(file="genomic_data_files//filter.svg", width = 10, height = 8, pointsize = 20)
 rf.filter <- filter_stats(rf.sc, plot = TRUE)
 rug(bitwise.dist(rf.sc, percent = TRUE), col = "#4D4D4D80")
 dev.off()
@@ -179,10 +179,28 @@ ggsave(ggia, filename = "genomic_data_files/ia.svg", scale = 1.2)
 rf.cow_dist <- bitwise.dist(rf.cow, percent = TRUE, mat = FALSE,
                             missing_match = TRUE, differences_only = FALSE,
                             threads = 0)
-min_span_net <- poppr.msn(rf.cow, rf.cow_dist, showplot = FALSE,
+fmin_span_net <- poppr.msn(rf.cow, rf.cow_dist, showplot = FALSE,
                           include.ties = TRUE,
                           threshold = rf.cutoff["farthest"],
                           clustering.algorithm = "farthest")
+
+set.seed(70)
+plot_poppr_msn(rf.cow,
+               fmin_span_net,
+               inds = "none",
+               mlg = TRUE,
+               gadj = 6,
+               nodebase = 1.15,
+               palette = PAL,
+               cutoff = NULL,
+               quantiles = FALSE,
+               beforecut = TRUE,
+               vertex.label.font = 2)
+#'
+#' Without collapsing
+mll(rf.cow) <- "original"
+min_span_net <- poppr.msn(rf.cow, rf.cow_dist, showplot = FALSE,
+                          include.ties = TRUE)
 
 set.seed(70)
 plot_poppr_msn(rf.cow,
@@ -198,7 +216,23 @@ plot_poppr_msn(rf.cow,
                vertex.label.font = 2)
 #'
 #+ msn_save, echo = FALSE
+mll(rf.cow) <- "contracted"
 svglite::svglite(file="genomic_data_files/fminspan.svg", width = 9, height = 10)
+set.seed(70)
+plot_poppr_msn(rf.cow,
+               fmin_span_net,
+               inds = "none",
+               mlg = TRUE,
+               gadj = 6,
+               nodebase = 1.15,
+               palette = PAL,
+               cutoff = NULL,
+               quantiles = FALSE,
+               beforecut = TRUE,
+               vertex.label.font = 2)
+dev.off()
+mll(rf.cow) <- "original"
+svglite::svglite(file="genomic_data_files/minspan.svg", width = 9, height = 10)
 set.seed(70)
 plot_poppr_msn(rf.cow,
                min_span_net,
@@ -211,7 +245,6 @@ plot_poppr_msn(rf.cow,
                quantiles = FALSE,
                beforecut = TRUE,
                vertex.label.font = 2)
-dev.off()
 #'
 #' Discriminant Analysis of Principle Components
 #' ---------------------------------------------
