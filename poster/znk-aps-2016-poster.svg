@@ -1227,9 +1227,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.94117647"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.24567901"
-     inkscape:cx="1762.7098"
-     inkscape:cy="1688.1154"
+     inkscape:zoom="0.1737213"
+     inkscape:cx="1966.2812"
+     inkscape:cy="1487.1679"
      inkscape:document-units="in"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -1246,7 +1246,9 @@
      inkscape:snap-global="false"
      inkscape:snap-bbox="true"
      inkscape:bbox-nodes="true"
-     inkscape:snap-text-baseline="false">
+     inkscape:snap-text-baseline="false"
+     inkscape:snap-others="false"
+     inkscape:snap-nodes="false">
     <inkscape:grid
        type="xygrid"
        id="grid167820"
@@ -1300,9 +1302,17 @@
        orientation="1,0"
        id="guide175784" />
     <sodipodi:guide
-       position="742.50268,3747.284"
+       position="89.999998,3780"
        orientation="0,1"
        id="guide197350" />
+    <sodipodi:guide
+       position="1080,3747.2841"
+       orientation="1,0"
+       id="guide217986" />
+    <sodipodi:guide
+       position="2160,3747.2841"
+       orientation="1,0"
+       id="guide217988" />
   </sodipodi:namedview>
   <metadata
      id="metadata35487">
@@ -1323,7 +1333,7 @@
      transform="translate(0,3267.6378)">
     <g
        id="g165815"
-       transform="translate(-2256.4197,-2313.5728)">
+       transform="translate(-2256.4197,-2346.2889)">
       <g
          transform="translate(2435.3078,396.95248)"
          id="g68523"
@@ -10996,7 +11006,7 @@
     </g>
     <g
        id="g167733"
-       transform="translate(-2264.3004,2273.7149)">
+       transform="translate(-2264.3004,2413.7149)">
       <g
          id="g167655">
         <text
@@ -13806,7 +13816,7 @@
     </g>
     <g
        id="g148065"
-       transform="translate(2358.8017,-2473.2098)">
+       transform="translate(2358.8017,-2545.9259)">
       <rect
          id="rect95196"
          style="fill:#ffffff;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
@@ -36855,7 +36865,7 @@
        id="rect105128" />
     <g
        id="g171795"
-       transform="translate(-134.18278,1.3e-5)">
+       transform="translate(-134.18278,-32.716121)">
       <g
          transform="translate(2458.1315,-1916.6203)"
          id="g105284"
@@ -68277,7 +68287,7 @@
     <g
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;font-family:Futura;-inkscape-font-specification:Futura;fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="g128570"
-       transform="matrix(0.8775789,0,0,0.8775789,0.04151966,530.14452)">
+       transform="matrix(0.8775789,0,0,0.8775789,1316.7083,530.14452)">
       <g
          transform="matrix(1.1394987,0,0,1.1394987,-674.2109,-1538.9258)"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:144px;font-family:Skia;-inkscape-font-specification:'Skia Bold';fill:#000000;fill-opacity:1;stroke:none"
@@ -71657,13 +71667,13 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:125%;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, ';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="1080"
-       y="-1927.6378"
+       y="-1860.354"
        id="text175766"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan175768"
          x="1080"
-         y="-1927.6378"
+         y="-1860.354"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70px;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, '">Filtering Multilocus Genotypes</tspan></text>
     <path
        style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:11.78999996;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:33.60000229;stroke-opacity:1"
@@ -71722,37 +71732,13 @@
        style="opacity:1;fill:#ffcc5c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:33.60000229;stroke-opacity:1" />
     <text
        sodipodi:linespacing="125%"
-       id="text197070"
-       y="-2529.6377"
-       x="1080"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:125%;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, ';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70px;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, '"
-         y="-2529.6377"
-         x="1080"
-         id="tspan197072"
-         sodipodi:role="line">Genotype Accumulation Curve</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:125%;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, ';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="1080"
-       y="-1347.7524"
-       id="text197074"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan197076"
-         x="1080"
-         y="-1347.7524"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70px;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, '">Flexible bootstrap analysis</tspan></text>
-    <text
-       sodipodi:linespacing="125%"
        id="text197078"
-       y="-1347.7524"
+       y="-1175.7524"
        x="1080"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:125%;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, ';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70px;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, '"
-         y="-1347.7524"
+         y="-1175.7524"
          x="1080"
          id="tspan197080"
          sodipodi:role="line">Flexible bootstrap analysis</tspan></text>
@@ -71760,42 +71746,42 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:100%;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, ';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="1080"
-       y="-587.75238"
+       y="-387.75238"
        id="text197082"
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan197084"
          x="1080"
-         y="-587.75238"
+         y="-387.75238"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70px;line-height:100%;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, '">Minimum Spanning Networks</tspan><tspan
          sodipodi:role="line"
          x="1080"
-         y="-517.75238"
+         y="-317.75238"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70px;line-height:100%;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, '"
          id="tspan197086">with filtered MLGs</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:125%;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, ';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="1083.0975"
-       y="297.02768"
+       y="337.02768"
        id="text197088"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan197090"
          x="1083.0975"
-         y="297.02768"
+         y="337.02768"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70px;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, '">Index of Association for SNPs</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:90px;line-height:125%;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, ';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="88.813477"
-       y="-2634.0137"
+       y="-2666.7295"
        id="text197092"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan197094"
          x="88.813477"
-         y="-2634.0137"
+         y="-2666.7295"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:90px;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, '">Motivation</tspan></text>
     <g
        id="g186804"
@@ -71939,7 +71925,7 @@
     </g>
     <g
        id="g217724"
-       transform="translate(18.768132,-80)">
+       transform="translate(18.768126,-112.71613)">
       <text
          sodipodi:linespacing="125%"
          id="text217714"
@@ -71968,12 +71954,12 @@
     <text
        sodipodi:linespacing="125%"
        id="text197356"
-       y="-2007.6378"
+       y="-2040.354"
        x="160.50005"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:90px;line-height:125%;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, ';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:90px;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, '"
-         y="-2007.6378"
+         y="-2040.354"
          x="160.50005"
          id="tspan197358"
          sodipodi:role="line">GBS (SNP) Data</tspan></text>
@@ -71981,13 +71967,13 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:90px;line-height:125%;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, ';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="2505.1465"
-       y="-2633.9749"
+       y="-2666.6907"
        id="text197360"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan197362"
          x="2505.1465"
-         y="-2633.9749"
+         y="-2666.6907"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:90px;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, '">SSR Data</tspan></text>
     <text
        sodipodi:linespacing="125%"
@@ -72072,7 +72058,7 @@
        xml:space="preserve"
        id="flowRoot217679"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       transform="translate(-45.614402,-3275.0618)"><flowRegion
+       transform="translate(-45.614408,-3307.7779)"><flowRegion
          id="flowRegion217681"><rect
            id="rect217683"
            width="901.43909"
@@ -72083,7 +72069,7 @@
          id="flowPara217695">Knowledge of the population dynamics and evolution of plant pathogens allows inferences on evolutionary processes involved in their adaptation to hosts, pesticides, and other environmental pressures. With the advent of high-throughput sequencing technologies, obtaining genome-wide data has become easier and cheaper than ever before with techniques such as genotyping-by-sequencing (GBS). </flowPara><flowPara
          id="flowPara217697"></flowPara><flowPara
          id="flowPara217699">We present here an overview of the R package poppr as it pertains to traditional and high-throughput population genetic data with select applications.</flowPara></flowRoot>    <g
-       transform="translate(2174.0194,-702.76381)"
+       transform="translate(2174.0194,-735.47994)"
        id="g217854">
       <text
          transform="matrix(1,0,-0.20425412,1,0,0)"
@@ -72098,5 +72084,95 @@
            y="-1874.0251"
            id="tspan217858">(Phytophthora infestans: 86 genotypes, 11 SSRs)</tspan></text>
     </g>
-  </g>
+    <g
+       id="g217990"
+       transform="translate(0,40)">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:125%;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, ';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="1080"
+         y="-2562.3535"
+         id="text197070"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan197072"
+           x="1080"
+           y="-2562.3535"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70px;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, '">Genotype Accumulation Curve</tspan></text>
+      <flowRoot
+         xml:space="preserve"
+         id="flowRoot217904"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         transform="translate(944.3856,-3217.7779)"><flowRegion
+           id="flowRegion217906"><rect
+             id="rect217908"
+             width="1080.5345"
+             height="459.61893"
+             x="135"
+             y="675"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;writing-mode:lr-tb;text-anchor:start;fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /></flowRegion><flowPara
+           id="flowPara217976">Knowledge of the population dynamics and evolution of plant pathogens allows inferences on evolutionary processes involved in their adaptation to hosts, pesticides, and other environmental pressures. With the advent of high-throughput sequencing technologies, obtaining genome-wide data has become easier and cheaper than ever before with techniques such as genotyping-by-sequencing (GBS).</flowPara></flowRoot>    </g>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot217916"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(944.3856,-2511.2955)"><flowRegion
+         id="flowRegion217918"><rect
+           id="rect217920"
+           width="1080.5345"
+           height="459.61893"
+           x="135"
+           y="675"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;writing-mode:lr-tb;text-anchor:start;fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /></flowRegion><flowPara
+         id="flowPara217978">Knowledge of the population dynamics and evolution of plant pathogens allows inferences on evolutionary processes involved in their adaptation to hosts, pesticides, and other environmental pressures. With the advent of high-throughput sequencing technologies, obtaining genome-wide data has become easier and cheaper than ever before with techniques such as genotyping-by-sequencing (GBS).</flowPara></flowRoot>    <flowRoot
+       transform="translate(944.3856,-1816.2025)"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="flowRoot217928"
+       xml:space="preserve"><flowRegion
+         id="flowRegion217930"><rect
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;writing-mode:lr-tb;text-anchor:start;fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+           y="675"
+           x="135"
+           height="459.61893"
+           width="1080.5345"
+           id="rect217932" /></flowRegion><flowPara
+         id="flowPara217980">Knowledge of the population dynamics and evolution of plant pathogens allows inferences on evolutionary processes involved in their adaptation to hosts, pesticides, and other environmental pressures. With the advent of high-throughput sequencing technologies, obtaining genome-wide data has become easier and cheaper than ever before with techniques such as genotyping-by-sequencing (GBS).</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot217940"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(944.3856,-946.8332)"><flowRegion
+         id="flowRegion217942"><rect
+           id="rect217944"
+           width="1080.5345"
+           height="459.61893"
+           x="135"
+           y="675"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;writing-mode:lr-tb;text-anchor:start;fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /></flowRegion><flowPara
+         id="flowPara217982">Knowledge of the population dynamics and evolution of plant pathogens allows inferences on evolutionary processes involved in their adaptation to hosts, pesticides, and other environmental pressures. With the advent of high-throughput sequencing technologies, obtaining genome-wide data has become easier and cheaper than ever before with techniques such as genotyping-by-sequencing (GBS).</flowPara></flowRoot>    <flowRoot
+       transform="translate(944.3856,-309.04425)"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="flowRoot217952"
+       xml:space="preserve"><flowRegion
+         id="flowRegion217954"><rect
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;writing-mode:lr-tb;text-anchor:start;fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+           y="675"
+           x="135"
+           height="459.61893"
+           width="1080.5345"
+           id="rect217956" /></flowRegion><flowPara
+         id="flowPara217984">Knowledge of the population dynamics and evolution of plant pathogens allows inferences on evolutionary processes involved in their adaptation to hosts, pesticides, and other environmental pressures. With the advent of high-throughput sequencing technologies, obtaining genome-wide data has become easier and cheaper than ever before with techniques such as genotyping-by-sequencing (GBS).</flowPara></flowRoot>    <flowRoot
+       transform="translate(2123.8831,-401.39346)"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="flowRoot217964"
+       xml:space="preserve"><flowRegion
+         id="flowRegion217966"><rect
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;writing-mode:lr-tb;text-anchor:start;fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+           y="675"
+           x="135"
+           height="457.58374"
+           width="901.43909"
+           id="rect217968" /></flowRegion><flowPara
+         id="flowPara217970">Knowledge of the population dynamics and evolution of plant pathogens allows inferences on evolutionary processes involved in their adaptation to hosts, pesticides, and other environmental pressures. With the advent of high-throughput sequencing technologies, obtaining genome-wide data has become easier and cheaper than ever before with techniques such as genotyping-by-sequencing (GBS). </flowPara><flowPara
+         id="flowPara217972"></flowPara><flowPara
+         id="flowPara217974">We present here an overview of the R package poppr as it pertains to traditional and high-throughput population genetic data with select applications.</flowPara></flowRoot>  </g>
 </svg>
