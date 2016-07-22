@@ -40,8 +40,8 @@ entitled
  - [genomic_data.R](genomic_data.R)
  - [microsatellite_data.R](microsatellite_data.R)
 
- They are written in such a way that they generate reports, which you can find
- here:
+They are written in such a way that they generate reports, which you can find
+here:
 
   - [genomic_data.md](genomic_data.md)
   - [microsatellite_data.md](microsatellite_data.md)
