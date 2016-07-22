@@ -1,8 +1,9 @@
 # poppr-poster-aps-2016
 
-source data for the APS 2016 poster on Tools for analysis of clonal population genetic data in R
+source data for the APS 2016 poster on Tools for analysis of clonal population
+genetic data in R
 
-# Abstract
+## Abstract
 
 ### [Tools for analysis of clonal population genetic data in R](http://www.apsnet.org/meetings/annual/abstracts/pages/abstractdetail.aspx?MID=816)
 
@@ -20,3 +21,47 @@ distance threshold, minimum spanning networks with reticulation, and sliding
 window analysis of the index of association. We present here an overview of
 poppr as it pertains to traditional and high-throughput population genetic
 data with select applications.
+
+## Poster
+
+The poster is located here: [poster/znk-aps-2016-poster.svg](poster/znk-
+aps-2016-poster.svg). This is an Inkscape SVG file.
+
+The fonts utilized are: 
+
+ - [Cooper Black](https://en.wikipedia.org/wiki/Cooper_Black)
+ - [Nanum Gothic](https://en.wikipedia.org/wiki/Nanum_font)
+
+## Scripts and Reports
+
+The figures are generated from R scripts in this repository. These R scripts are
+entitled
+
+ - [genomic_data.R](genomic_data.R)
+ - [microsatellite_data.R](microsatellite_data.R)
+
+ They are written in such a way that they generate reports, which you can find
+ here:
+
+  - [genomic_data.md](genomic_data.md)
+  - [microsatellite_data.md](microsatellite_data.md)
+
+## Data
+
+### Microsatellite data of *Phytophthora infestans*
+
+These data are courtesy of Erica M. Goss from her 2014 paper:
+
+Goss, Erica M., et al. "The Irish potato famine pathogen Phytophthora infestans
+originated in central Mexico rather than the Andes." Proceedings of the National
+Academy of Sciences 111.24 (2014): 8791-8796. [doi:
+10.1073/pnas.1401884111](http://dx.doi.org/10.1073/pnas.1401884111)
+
+It is now part of the *poppr* R package.
+
+### GBS SNP data of *Phytophthora rubi*
+
+These data are kindly provided by Javier F. Tabima and Niklaus J. Grünwald.
+These data were first filtered with the package
+[vcfR](https://github.com/knausb/vcfR#readme) before running the analysis. You
+can find the scripts/tutorials for that at https://github.com/knausb/vcfR_class
