@@ -24,17 +24,19 @@ data with select applications.
 
 ## Poster
 
-The poster is located here: [poster/znk-aps-2016-poster.svg](poster/znk-aps-2016-poster.svg). This is an Inkscape SVG file.
+The poster is located here: [poster/znk-aps-2016-poster.svg](poster/znk-aps-2016-poster.svg). This is an [Inkscape](https://inkscape.org/) SVG file.
 
 The fonts utilized are: 
 
  - [Cooper Black](https://en.wikipedia.org/wiki/Cooper_Black)
  - [Nanum Gothic](https://en.wikipedia.org/wiki/Nanum_font)
 
+The figures are derived from R scripts, detailed below. Minimal manipulation was
+used on the figures in Inkscape (this includes rotation, resizing, and trimming).
+
 ## Scripts and Reports
 
-The figures are generated from R scripts in this repository. These R scripts are
-entitled
+The figures are generated from R scripts in this repository.
 
  - [genomic_data.R](genomic_data.R)
  - [microsatellite_data.R](microsatellite_data.R)
