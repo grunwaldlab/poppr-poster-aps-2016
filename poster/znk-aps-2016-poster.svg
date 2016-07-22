@@ -1227,9 +1227,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.94117647"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.32283951"
-     inkscape:cx="1998.3103"
-     inkscape:cy="1629.8069"
+     inkscape:zoom="1.291358"
+     inkscape:cx="1543.6192"
+     inkscape:cy="1361.3892"
      inkscape:document-units="in"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -28073,7 +28073,7 @@
            id="flowPara218348">One recent addition to poppr is the genotype accumulation curve (GAC). When starting analysis with a handful of markers, it's important to check the number of markers you have is sufficient to detect the diversity of mulitlocus genotypes (MLGs). This is visualised by the GAC (S1), which randomly samples n loci from your data (x axis), reporting the number of MLGs observed (y axis).</flowPara></flowRoot>    </g>
     <g
        id="g165815"
-       transform="translate(-2245.6984,-1435.4515)">
+       transform="translate(-2245.6984,-1495.4515)">
       <g
          transform="translate(2435.3078,396.95248)"
          id="g68523"
@@ -35565,7 +35565,7 @@
     </g>
     <g
        id="g171795"
-       transform="translate(-123.46148,878.12127)">
+       transform="translate(-123.46148,818.12127)">
       <g
          transform="translate(2458.1315,-1916.6203)"
          id="g105284"
@@ -66891,14 +66891,14 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70px;line-height:100%;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="1090.7213"
-       y="-1043.5166"
+       y="-1103.5166"
        id="text175766"
        sodipodi:linespacing="100%"><tspan
-         y="-1043.5166"
+         y="-1103.5166"
          x="1090.7213"
          sodipodi:role="line"
          id="tspan218330">Define Multilocus Lineages</tspan><tspan
-         y="-973.5166"
+         y="-1033.5166"
          x="1090.7213"
          sodipodi:role="line"
          id="tspan218332">by Genetic Distance</tspan></text>
@@ -66906,7 +66906,7 @@
        xml:space="preserve"
        id="flowRoot217916"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       transform="translate(955.1069,-1600.4581)"><flowRegion
+       transform="translate(955.1069,-1660.4581)"><flowRegion
          id="flowRegion217918"><rect
            id="rect217920"
            width="1080.5345"
@@ -66914,7 +66914,7 @@
            x="135"
            y="675"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;writing-mode:lr-tb;text-anchor:start;fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /></flowRegion><flowPara
-         id="flowPara218346">Multilocus genotypes (MLGs) are initially defined as the unique combination of alleles across all loci. New MLGs are created when this combination differs, which could be caused by genotyping error. New in poppr v2 is the ability to use genetic distance to identify and collapse similar MLGs into multilocus lineages (MLLs) for any data type using three different clustering methods (G1, S2).</flowPara></flowRoot>    <g
+         id="flowPara229859">Multilocus genotypes (MLGs) are initially defined as the unique combination of alleles across all loci. New MLGs are created when this combination differs, which could be caused by genotyping error. New in poppr v2 is the ability to use genetic distance to identify and collapse similar MLGs into multilocus lineages (MLLs) for any data type using three different clustering methods (G2, S3).</flowPara></flowRoot>    <g
        id="g163608"
        transform="translate(-1797.2019,-1609.5969)">
       <rect
@@ -72121,20 +72121,20 @@
          sodipodi:role="line">Flexible bootstrap analysis</tspan></text>
     <flowRoot
        transform="translate(933.6643,-2387.0399)"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
        id="flowRoot217928"
        xml:space="preserve"><flowRegion
          id="flowRegion217930"><rect
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;writing-mode:lr-tb;text-anchor:start;fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;writing-mode:lr;text-anchor:start;fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"
            y="675"
            x="135"
            height="459.61893"
            width="1080.5345"
            id="rect217932" /></flowRegion><flowPara
-         id="flowPara218344">Bootstrapping dendrograms is a way to assess the internal consistency of your data. Poppr provides the function aboot(), which stands for &quot;any boot&quot;. This function will create and bootstrap dendrograms for any data type with any genetic distance, from individuals to populations. (G2, S3)</flowPara></flowRoot>    <flowRoot
+         id="flowPara229857">Bootstrapping dendrograms is a way to assess the internal consistency of your data. Poppr provides the function aboot(), which stands for &quot;any boot&quot;. This function will create and bootstrap dendrograms for any data type with any genetic distance, from individuals to populations. (G1, S2)</flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot217940"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        transform="translate(944.3856,-946.8332)"><flowRegion
          id="flowRegion217942"><rect
            id="rect217944"
@@ -72142,8 +72142,8 @@
            height="459.61893"
            x="135"
            y="675"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;writing-mode:lr;text-anchor:start;fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" /></flowRegion><flowPara
-         id="flowPara218342">Minimum spanning networks are a useful tool for asessing the population structure of clonal organisms by showing the shortest connections between multilocus genotypes (G3-A, S4-A). New to poppr v2 is the ability to create minimum spanning networks showing connections between MLLs (G3-B, S4-B).  </flowPara></flowRoot>    <flowRoot
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;writing-mode:lr-tb;text-anchor:start;fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /></flowRegion><flowPara
+         id="flowPara218342">Minimum spanning networks are a useful tool for asessing the population structure of clonal organisms by showing the shortest connections between multilocus genotypes (G3-a, S4-a). New to poppr v2 is the ability to create minimum spanning networks showing connections between MLLs (G3-a, S4-a).  </flowPara></flowRoot>    <flowRoot
        transform="translate(944.3856,-349.04425)"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="flowRoot217952"
@@ -72196,5 +72196,139 @@
          id="qr-path-3"
          style="fill:#ff6f69;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" />
     </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Bold';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="199.16042"
+       y="-1031.6472"
+       id="text229861"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan229893"
+         x="199.16042"
+         y="-1031.6472">G2</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text229865"
+       y="-320.23822"
+       x="199.16042"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Bold';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         sodipodi:role="line"
+         id="tspan229895"
+         x="199.16042"
+         y="-320.23822">G3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Bold';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="199.16042"
+       y="250.85162"
+       id="text229869"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan229897"
+         x="199.16042"
+         y="250.85162">G4</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text229873"
+       y="-1841.7393"
+       x="201.83386"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50px;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic Bold'"
+         y="-1841.7393"
+         x="201.83386"
+         id="tspan229875"
+         sodipodi:role="line">G1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="2334.7229"
+       y="-2538.8042"
+       id="text229889"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan229891"
+         x="2334.7229"
+         y="-2538.8042"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50px;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic Bold'">S1</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text229899"
+       y="-1778.766"
+       x="2334.7229"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Bold';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         id="tspan229901"
+         sodipodi:role="line"
+         x="2334.7229"
+         y="-1778.766">S2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Bold';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="2334.7229"
+       y="-1051.2516"
+       id="text229903"
+       sodipodi:linespacing="125%"><tspan
+         id="tspan229905"
+         sodipodi:role="line"
+         x="2334.7229"
+         y="-1051.2516">S3</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text229907"
+       y="-356.26117"
+       x="2334.7229"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Bold';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         id="tspan229909"
+         sodipodi:role="line"
+         x="2334.7229"
+         y="-356.26117">S4</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Bold';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="406.69388"
+       y="42.916656"
+       id="text229911"
+       sodipodi:linespacing="125%"><tspan
+         y="42.916656"
+         x="406.69388"
+         id="tspan229913"
+         sodipodi:role="line">a</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text229919"
+       y="-119.19041"
+       x="709.4472"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Bold';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         sodipodi:role="line"
+         id="tspan229921"
+         x="709.4472"
+         y="-119.19041">b</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text229923"
+       y="-174.73294"
+       x="2962.4673"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Bold';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         sodipodi:role="line"
+         id="tspan229925"
+         x="2962.4673"
+         y="-174.73294">a</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Bold';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="2501.8191"
+       y="-227.7932"
+       id="text229927"
+       sodipodi:linespacing="125%"><tspan
+         y="-227.7932"
+         x="2501.8191"
+         id="tspan229929"
+         sodipodi:role="line">b</tspan></text>
   </g>
 </svg>
