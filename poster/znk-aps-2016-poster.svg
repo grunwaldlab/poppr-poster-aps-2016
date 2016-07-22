@@ -1256,6 +1256,19 @@
          stdDeviation="13.783161"
          id="feGaussianBlur230043" />
     </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter240381"
+       x="-0.034390805"
+       width="1.0687816"
+       y="-0.079433625"
+       height="1.1588673">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="16.383246"
+         id="feGaussianBlur240383" />
+    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -1264,11 +1277,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.94117647"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.16141975"
-     inkscape:cx="1356.8267"
-     inkscape:cy="1122.0109"
+     inkscape:zoom="0.228282"
+     inkscape:cx="2295.6263"
+     inkscape:cy="1188.9386"
      inkscape:document-units="in"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g240357"
      showgrid="false"
      units="in"
      inkscape:window-width="1200"
@@ -1412,6 +1425,40 @@
        x="45"
        y="-2163.2642"
        ry="216.53802" />
+  </g>
+  <g
+     inkscape:label="background copy"
+     id="g240357"
+     inkscape:groupmode="layer">
+    <rect
+       style="display:inline;opacity:1;fill:#ffeeaf;fill-opacity:0.94117647;fill-rule:nonzero;stroke:none;stroke-width:4.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:33.60000229;stroke-opacity:1"
+       id="rect240359"
+       width="3149.8594"
+       height="4230"
+       x="45"
+       y="-3222.6377"
+       transform="translate(0,3267.6378)" />
+    <path
+       transform="matrix(0.96769299,0,0,1.0040986,71.18013,3266.9944)"
+       style="display:inline;opacity:1;fill:#96ceb4;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:33.60000229;stroke-opacity:1;filter:url(#filter230037)"
+       d="m 2387.0072,-2727.6377 625.9856,0 c 100.832,0 182.0072,81.1752 182.0072,182.0072 l 0,2539.5837776 C 3195,94.785251 3113.8248,175.96045 3012.9928,175.96045 l -625.9856,0 C 2286.1752,175.96045 2205,94.785251 2205,-6.0467224 l 0,-634.8959476 -27.1608,-853.02923 -1063.7965,-374.1627 1090.9573,-156.0293 0,-521.4666 c 0,-100.832 81.1752,-182.0072 182.0072,-182.0072 z"
+       id="rect240361"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssssccccss" />
+    <path
+       transform="matrix(0.9676484,0,0,1.0013299,34.001223,3278.7669)"
+       style="display:inline;opacity:1;fill:#ffcc5c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:33.60000229;stroke-opacity:1;filter:url(#filter230041)"
+       d="m 261.53802,-2163.2642 556.92396,0 c 119.96206,0 216.53802,96.576 216.53802,216.5381 l 1163.4396,437.1876 -1163.4396,113.4576 0,795.62999 0,673.137595 0,673.137595 c 0,119.96207 -96.57596,216.53802 -216.53802,216.53802 l -556.92396,0 C 141.57596,962.3623 45,865.78635 45,745.82428 l 0,-2692.55038 c 0,-119.9621 96.57596,-216.5381 216.53802,-216.5381 z"
+       id="rect240363"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssccccssssss" />
+    <rect
+       style="opacity:0.745;fill:#ffffff;fill-opacity:0.94117647;fill-rule:nonzero;stroke:none;stroke-width:4.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:33.60000229;stroke-opacity:1;filter:url(#filter240381)"
+       id="rect240367"
+       width="1143.3228"
+       height="495.00183"
+       x="1042.5702"
+       y="1323.7061" />
   </g>
   <g
      inkscape:label="Layer 1"
@@ -2206,24 +2253,24 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Bold';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="406.69388"
-       y="42.916656"
+       y="2.9166565"
        id="text229911"
        sodipodi:linespacing="125%"><tspan
-         y="42.916656"
+         y="2.9166565"
          x="406.69388"
          id="tspan229913"
          sodipodi:role="line">a</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text229919"
-       y="-119.19041"
+       y="-159.1904"
        x="709.4472"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Bold';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          sodipodi:role="line"
          id="tspan229921"
          x="709.4472"
-         y="-119.19041">b</tspan></text>
+         y="-159.1904">b</tspan></text>
     <g
        id="g230367">
       <text
@@ -2770,7 +2817,7 @@
     </g>
     <g
        id="g166852"
-       transform="matrix(1.4166535,0,0,1.4166535,-3082.3563,991.48888)">
+       transform="matrix(1.4166535,0,0,1.4166535,-3082.3563,951.48888)">
       <polyline
          transform="translate(2161.6906,-1151.7992)"
          id="polyline72722"
@@ -2980,7 +3027,7 @@
     </g>
     <g
        id="g166994"
-       transform="matrix(0.74604738,0.06449503,0.06449503,-0.74604738,-943.15052,-734.54909)">
+       transform="matrix(0.74604738,0.06449503,0.06449503,-0.74604738,-943.15052,-774.54909)">
       <polyline
          transform="translate(1532.5156,-1151.7992)"
          id="polyline72972"
@@ -3422,7 +3469,7 @@
          sodipodi:role="line">GBS (SNP) Data</tspan></text>
     <g
        id="g165815"
-       transform="translate(-2245.6984,-1495.4515)">
+       transform="translate(-2245.6984,-1577.4515)">
       <g
          transform="translate(2435.3078,396.95248)"
          id="g68523"
@@ -13088,24 +13135,24 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Bold';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="199.16042"
-       y="-1031.6472"
+       y="-1113.6472"
        id="text229861"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan229893"
          x="199.16042"
-         y="-1031.6472">G2</tspan></text>
+         y="-1113.6472">G2</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text229865"
-       y="-320.23822"
+       y="-360.23822"
        x="199.16042"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Bold';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          sodipodi:role="line"
          id="tspan229895"
          x="199.16042"
-         y="-320.23822">G3</tspan></text>
+         y="-360.23822">G3</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Bold';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -13131,7 +13178,7 @@
          sodipodi:role="line">G1</tspan></text>
     <g
        id="g141343"
-       transform="matrix(1.3947001,0,0,1.3947001,2736.1312,1215.0754)">
+       transform="matrix(1.3947001,0,0,1.3947001,2736.1312,1175.0754)">
       <polyline
          transform="translate(-477.54235,-1323.2435)"
          id="polyline94114"
@@ -13799,7 +13846,7 @@
     </g>
     <g
        id="g141030"
-       transform="matrix(0.78535745,0,0,0.78535745,2497.8549,662.04032)">
+       transform="matrix(0.78535745,0,0,0.78535745,2497.8549,622.04032)">
       <polyline
          transform="translate(148.54868,-1323.2435)"
          id="polyline94613"
@@ -14769,7 +14816,7 @@
     </g>
     <g
        id="g171795"
-       transform="translate(-123.46148,818.12127)">
+       transform="translate(-123.46148,736.12127)">
       <g
          transform="translate(2458.1315,-1916.6203)"
          id="g105284"
@@ -72147,43 +72194,43 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Bold';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="2334.7229"
-       y="-1051.2516"
+       y="-1133.2516"
        id="text229903"
        sodipodi:linespacing="125%"><tspan
          id="tspan229905"
          sodipodi:role="line"
          x="2334.7229"
-         y="-1051.2516">S3</tspan></text>
+         y="-1133.2516">S3</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text229907"
-       y="-356.26117"
+       y="-396.26117"
        x="2334.7229"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Bold';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          id="tspan229909"
          sodipodi:role="line"
          x="2334.7229"
-         y="-356.26117">S4</tspan></text>
+         y="-396.26117">S4</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text229923"
-       y="-174.73294"
+       y="-214.73294"
        x="2962.4673"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Bold';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          sodipodi:role="line"
          id="tspan229925"
          x="2962.4673"
-         y="-174.73294">a</tspan></text>
+         y="-214.73294">a</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Bold';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="2501.8191"
-       y="-227.7932"
+       y="-267.79321"
        id="text229927"
        sodipodi:linespacing="125%"><tspan
-         y="-227.7932"
+         y="-267.79321"
          x="2501.8191"
          id="tspan229929"
          sodipodi:role="line">b</tspan></text>
@@ -72191,17 +72238,17 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:100%;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, ';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="1080"
-       y="-387.75238"
+       y="-427.75238"
        id="text197082"
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan197084"
          x="1080"
-         y="-387.75238"
+         y="-427.75238"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70px;line-height:100%;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, '">Minimum Spanning Networks</tspan><tspan
          sodipodi:role="line"
          x="1080"
-         y="-317.75238"
+         y="-357.75238"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70px;line-height:100%;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, '"
          id="tspan197086">with filtered MLGs</tspan></text>
     <text
@@ -72256,7 +72303,7 @@
          id="flowPara217697"></flowPara><flowPara
          id="flowPara217699">We present here an overview of the R package poppr as it pertains to traditional and high-throughput population genetic data with select applications.</flowPara></flowRoot>    <g
        id="g217990"
-       transform="translate(0,40)">
+       transform="translate(0,122)">
       <text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:125%;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, ';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -72286,14 +72333,14 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70px;line-height:100%;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="1080.2393"
-       y="-1099.5665"
+       y="-1181.5665"
        id="text175766"
        sodipodi:linespacing="100%"><tspan
-         y="-1099.5665"
+         y="-1181.5665"
          x="1080.2393"
          sodipodi:role="line"
          id="tspan218330">Define Multilocus Lineages</tspan><tspan
-         y="-1029.5665"
+         y="-1111.5665"
          x="1080.2393"
          sodipodi:role="line"
          id="tspan218332">by Genetic Distance</tspan></text>
@@ -72301,7 +72348,7 @@
        xml:space="preserve"
        id="flowRoot217916"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       transform="translate(944.62484,-1656.508)"><flowRegion
+       transform="translate(944.62484,-1738.508)"><flowRegion
          id="flowRegion217918"><rect
            id="rect217920"
            width="1080.5345"
@@ -72337,7 +72384,7 @@
        xml:space="preserve"
        id="flowRoot217940"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       transform="translate(944.3856,-946.8332)"><flowRegion
+       transform="translate(944.3856,-986.8332)"><flowRegion
          id="flowRegion217942"><rect
            id="rect217944"
            width="1080.5345"
