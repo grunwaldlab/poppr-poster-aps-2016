@@ -16,7 +16,10 @@
    id="svg35482"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="znk-aps-2016-poster.svg">
+   sodipodi:docname="znk-aps-2016-poster.svg"
+   inkscape:export-filename="/Users/zhian/Documents/Grunwald/poppr-poster-aps-2016/poster/znk-aps-2016-poster.png"
+   inkscape:export-xdpi="300.01999"
+   inkscape:export-ydpi="300.01999">
   <defs
      id="defs35484">
     <linearGradient
@@ -1362,6 +1365,126 @@
        y1="1696.6492"
        x2="929.6665"
        y2="1694.1693" />
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       x="-0.15"
+       width="1.3"
+       y="-0.15"
+       height="1.3"
+       inkscape:label="Ink Blot"
+       id="filter15019">
+      <feGaussianBlur
+         in="SourceGraphic"
+         stdDeviation="10 10"
+         result="blur1"
+         id="feGaussianBlur15021" />
+      <feTurbulence
+         type="fractalNoise"
+         baseFrequency="0.04"
+         numOctaves="3"
+         seed="0"
+         result="turbulence"
+         id="feTurbulence15023" />
+      <feDisplacementMap
+         in="blur1"
+         in2="turbulence"
+         xChannelSelector="R"
+         yChannelSelector="G"
+         scale="50"
+         result="map"
+         id="feDisplacementMap15025" />
+      <feGaussianBlur
+         in="map"
+         stdDeviation="5"
+         result="blur2"
+         id="feGaussianBlur15027" />
+      <feComposite
+         in="blur2"
+         in2="map"
+         operator="over"
+         result="composite"
+         id="feComposite15029" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       x="-0.15"
+       width="1.3"
+       y="-0.15"
+       height="1.3"
+       inkscape:label="Ink Blot"
+       id="filter15031">
+      <feGaussianBlur
+         in="SourceGraphic"
+         stdDeviation="10 10"
+         result="blur1"
+         id="feGaussianBlur15033" />
+      <feTurbulence
+         type="fractalNoise"
+         baseFrequency="0.04"
+         numOctaves="3"
+         seed="0"
+         result="turbulence"
+         id="feTurbulence15035" />
+      <feDisplacementMap
+         in="blur1"
+         in2="turbulence"
+         xChannelSelector="R"
+         yChannelSelector="G"
+         scale="50"
+         result="map"
+         id="feDisplacementMap15037" />
+      <feGaussianBlur
+         in="map"
+         stdDeviation="5"
+         result="blur2"
+         id="feGaussianBlur15039" />
+      <feComposite
+         in="blur2"
+         in2="map"
+         operator="over"
+         result="composite"
+         id="feComposite15041" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       x="-0.15"
+       width="1.3"
+       y="-0.15"
+       height="1.3"
+       inkscape:label="Ink Blot"
+       id="filter15043">
+      <feGaussianBlur
+         in="SourceGraphic"
+         stdDeviation="10 10"
+         result="blur1"
+         id="feGaussianBlur15045" />
+      <feTurbulence
+         type="fractalNoise"
+         baseFrequency="0.04"
+         numOctaves="3"
+         seed="0"
+         result="turbulence"
+         id="feTurbulence15047" />
+      <feDisplacementMap
+         in="blur1"
+         in2="turbulence"
+         xChannelSelector="R"
+         yChannelSelector="G"
+         scale="50"
+         result="map"
+         id="feDisplacementMap15049" />
+      <feGaussianBlur
+         in="map"
+         stdDeviation="5"
+         result="blur2"
+         id="feGaussianBlur15051" />
+      <feComposite
+         in="blur2"
+         in2="map"
+         operator="over"
+         result="composite"
+         id="feComposite15053" />
+    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -1370,16 +1493,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.94117647"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.32283951"
-     inkscape:cx="1620"
-     inkscape:cy="2327.4155"
+     inkscape:zoom="0.3462963"
+     inkscape:cx="1536.6042"
+     inkscape:cy="1384.2686"
      inkscape:document-units="in"
      inkscape:current-layer="g240401"
      showgrid="false"
      units="in"
-     inkscape:window-width="1200"
-     inkscape:window-height="1875"
-     inkscape:window-x="1280"
+     inkscape:window-width="1276"
+     inkscape:window-height="755"
+     inkscape:window-x="4"
      inkscape:window-y="1"
      inkscape:window-maximized="1"
      showguides="false"
@@ -1483,7 +1606,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1525,6 +1648,24 @@
      inkscape:label="background copy 1"
      id="g240401"
      inkscape:groupmode="layer">
+    <circle
+       style="display:inline;opacity:0.38431373;fill:#ffcc5c;fill-opacity:1;stroke:none;stroke-width:9.60000038;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:38.40000153, 9.60000038000000089;stroke-dashoffset:33.60000229;stroke-opacity:1;filter:url(#filter15043)"
+       id="circle14153"
+       cx="2012.9716"
+       cy="621.24969"
+       r="837.1842" />
+    <circle
+       cy="2736.6301"
+       cx="665.2121"
+       id="circle14151"
+       style="display:inline;opacity:0.38431373;fill:#ffcc5c;fill-opacity:1;stroke:none;stroke-width:9.60000038;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:38.40000153, 9.60000038000000089;stroke-dashoffset:33.60000229;stroke-opacity:1;filter:url(#filter15019)"
+       r="649.32825" />
+    <circle
+       style="display:inline;opacity:0.384;fill:#ffcc5c;fill-opacity:1;stroke:none;stroke-width:9.60000038;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:38.40000153, 9.60000038000000089;stroke-dashoffset:33.60000229;stroke-opacity:1;filter:url(#filter15031)"
+       id="path13348"
+       cx="2744.4272"
+       cy="3902.0532"
+       r="837.1842" />
     <rect
        ry="184.40067"
        style="display:inline;opacity:0.82399998;fill:#ff6f69;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:9.13031006;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:18.26062033, 18.26062033;stroke-dashoffset:0;stroke-opacity:1"
@@ -2250,7 +2391,7 @@
            x="990"
            y="1440"
            style="font-size:70px;fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /></flowRegion><flowPara
-         id="flowPara175764"></flowPara></flowRoot>    <path
+         id="flowPara175764" /></flowRoot>    <path
        style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:11.78999996;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:33.60000229;stroke-opacity:1"
        d="m 1591.3729,786.7581 0,-46.2145 10.2019,0 c 20.8666,10e-5 31.3582,2.844 39.043,10.5834 9.4246,9.4914 10.6862,25.0981 2.9624,36.6461 -6.7258,10.0559 -16.9127,14.5142 -35.0347,15.3331 l -7.0711,0.3195 -0.1339,14.7734 -0.1339,14.7735 -4.9169,0 -4.9168,-1e-4 0,-46.2144 z m 24.4962,8.2779 c 10.2428,-1.5007 17.8192,-6.7885 20.7241,-14.464 0.6303,-1.6653 1.2116,-4.6297 1.3621,-6.9458 0.6532,-10.0543 -3.6193,-17.7659 -12.1768,-21.9788 -4.8455,-2.3854 -7.9728,-3.0193 -16.6017,-3.3649 l -7.9549,-0.3186 0,23.7324 c 0,13.0528 0.1695,23.9019 0.3768,24.1092 0.4304,0.4304 9.3707,-0.052 14.2704,-0.7695 z"
        id="path186784"
@@ -2501,7 +2642,7 @@
          sodipodi:role="line"
          id="tspan217606"
          x="3105"
-         y="-2952.6377"></tspan><tspan
+         y="-2952.6377" /><tspan
          sodipodi:role="line"
          x="3105"
          y="-2912.6377"
@@ -2518,7 +2659,7 @@
            x="115.12693"
            y="705.01428"
            style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /></flowRegion><flowPara
-         id="flowPara217636"></flowPara></flowRoot>    <flowRoot
+         id="flowPara217636" /></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot217638"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2530,7 +2671,7 @@
            x="132.39598"
            y="679.11072"
            style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /></flowRegion><flowPara
-         id="flowPara217644"></flowPara></flowRoot>    <flowRoot
+         id="flowPara217644" /></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot217671"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:125%;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2542,7 +2683,7 @@
            x="135"
            y="675"
            style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /></flowRegion><flowPara
-         id="flowPara217677"></flowPara></flowRoot>    <path
+         id="flowPara217677" /></flowRoot>    <path
        style="opacity:0.5;fill:#ff6f69;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:33.60000229;stroke-opacity:1"
        d=""
        id="path218230"
@@ -72623,7 +72764,7 @@
            y="675"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;writing-mode:lr-tb;text-anchor:start;fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /></flowRegion><flowPara
          id="flowPara217695">Knowledge of the population dynamics and evolution of plant pathogens allows inferences on evolutionary processes involved in their adaptation to hosts, pesticides, and other environmental pressures. With the advent of high-throughput sequencing technologies, obtaining genome-wide data has become easier and cheaper than ever before with techniques such as genotyping-by-sequencing (GBS). </flowPara><flowPara
-         id="flowPara217697"></flowPara><flowPara
+         id="flowPara217697" /><flowPara
          id="flowPara217699">We present here an overview of the R package poppr as it pertains to traditional and high-throughput population genetic data with select applications.</flowPara></flowRoot>    <text
        sodipodi:linespacing="125%"
        id="text197070"
@@ -72736,6 +72877,6 @@
            width="891.11682"
            id="rect217968" /></flowRegion><flowPara
          id="flowPara217970">Knowledge of the population dynamics and evolution of plant pathogens allows inferences on evolutionary processes involved in their adaptation to hosts, pesticides, and other environmental pressures. With the advent of high-throughput sequencing technologies, obtaining genome-wide data has become easier and cheaper than ever before with techniques such as genotyping-by-sequencing (GBS). </flowPara><flowPara
-         id="flowPara217972"></flowPara><flowPara
+         id="flowPara217972" /><flowPara
          id="flowPara217974">We present here an overview of the R package poppr as it pertains to traditional and high-throughput population genetic data with select applications.</flowPara></flowRoot>  </g>
 </svg>
