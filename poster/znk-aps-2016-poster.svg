@@ -7,6 +7,7 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="36in"
@@ -18,6 +19,18 @@
    sodipodi:docname="znk-aps-2016-poster.svg">
   <defs
      id="defs35484">
+    <linearGradient
+       id="linearGradient240434"
+       inkscape:collect="always">
+      <stop
+         id="stop243558"
+         offset="0"
+         style="stop-color:#ffeeaf;stop-opacity:1;" />
+      <stop
+         id="stop243560"
+         offset="1"
+         style="stop-color:#ffeeaf;stop-opacity:0;" />
+    </linearGradient>
     <linearGradient
        id="linearGradient5566">
       <stop
@@ -1269,6 +1282,17 @@
          stdDeviation="16.383246"
          id="feGaussianBlur240383" />
     </filter>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient240434"
+       id="radialGradient240440"
+       cx="899.3374"
+       cy="-3575.8765"
+       fx="899.3374"
+       fy="-3575.8765"
+       r="99.830734"
+       gradientTransform="matrix(2.1042816,-1.8826169,1.2630468,1.4117615,3680.2923,3129.6725)"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -1277,11 +1301,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.94117647"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.228282"
-     inkscape:cx="1594.7388"
-     inkscape:cy="1188.9386"
+     inkscape:zoom="0.32283951"
+     inkscape:cx="1036.028"
+     inkscape:cy="2986.512"
      inkscape:document-units="in"
-     inkscape:current-layer="g240357"
+     inkscape:current-layer="g240401"
      showgrid="false"
      units="in"
      inkscape:window-width="1200"
@@ -1398,7 +1422,8 @@
      inkscape:groupmode="layer"
      id="layer8"
      inkscape:label="background"
-     sodipodi:insensitive="true">
+     sodipodi:insensitive="true"
+     style="display:none">
     <rect
        transform="translate(0,3267.6378)"
        y="-3222.6377"
@@ -1427,10 +1452,42 @@
        ry="216.53802" />
   </g>
   <g
+     style="display:inline"
+     inkscape:label="background copy 1"
+     id="g240401"
+     inkscape:groupmode="layer">
+    <rect
+       style="display:inline;opacity:1;fill:#ffeeaf;fill-opacity:0.94117647;fill-rule:nonzero;stroke:none;stroke-width:4.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:33.60000229;stroke-opacity:1"
+       id="rect240403"
+       width="3149.8594"
+       height="4230"
+       x="45"
+       y="-3222.6377"
+       transform="translate(0,3267.6378)" />
+    <rect
+       ry="182.00717"
+       transform="matrix(0.96769299,0,0,1.0040986,71.18013,3266.9944)"
+       style="display:inline;opacity:1;fill:#ffcc5c;fill-opacity:1;fill-rule:nonzero;stroke:#aad8b0;stroke-width:9.13031016;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:18.26062033, 18.26062032999999829;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect240405"
+       width="990"
+       height="2903.5981"
+       x="2205"
+       y="-2727.6377" />
+    <rect
+       ry="216.53802"
+       y="-2163.2642"
+       x="45"
+       height="3125.6265"
+       width="990"
+       id="rect240407"
+       style="display:inline;opacity:1;fill:#ffcc5c;fill-opacity:1;fill-rule:nonzero;stroke:#aad8b0;stroke-width:9.14313486;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:18.28626973, 18.28626973000000078;stroke-dashoffset:0;stroke-opacity:1"
+       transform="matrix(0.9676484,0,0,1.0013299,34.001223,3278.7669)" />
+  </g>
+  <g
      inkscape:label="background copy"
      id="g240357"
      inkscape:groupmode="layer"
-     style="display:inline">
+     style="display:none">
     <rect
        style="display:inline;opacity:1;fill:#ffeeaf;fill-opacity:0.94117647;fill-rule:nonzero;stroke:none;stroke-width:4.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:33.60000229;stroke-opacity:1"
        id="rect240359"
@@ -1441,14 +1498,14 @@
        transform="translate(0,3267.6378)" />
     <path
        transform="matrix(0.96769299,0,0,1.0040986,71.18013,3266.9944)"
-       style="display:inline;opacity:1;fill:#96ceb4;fill-opacity:1;fill-rule:nonzero;stroke:#aad8b0;stroke-width:13.60416215;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:33.60000229;stroke-opacity:1"
+       style="display:inline;opacity:1;fill:#96ceb4;fill-opacity:1;fill-rule:nonzero;stroke:#aad8b0;stroke-width:13.60416222;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:33.60000229;stroke-opacity:1"
        d="m 2387.0072,-2727.6377 625.9856,0 c 100.832,0 182.0072,81.1752 182.0072,182.0072 l 0,2539.5837776 C 3195,94.785251 3113.8248,175.96045 3012.9928,175.96045 l -625.9856,0 C 2286.1752,175.96045 2205,94.785251 2205,-6.0467224 l 0,-634.8959476 -27.1608,-853.02923 -1063.7965,-374.1627 1090.9573,-156.0293 0,-521.4666 c 0,-100.832 81.1752,-182.0072 182.0072,-182.0072 z"
        id="rect240361"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="sssssssccccss" />
     <path
        transform="matrix(0.9676484,0,0,1.0013299,34.001223,3278.7669)"
-       style="display:inline;opacity:1;fill:#ffcc5c;fill-opacity:1;fill-rule:nonzero;stroke:#aad8b0;stroke-width:13.62327095;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:33.60000229;stroke-opacity:1"
+       style="display:inline;opacity:1;fill:#ffcc5c;fill-opacity:1;fill-rule:nonzero;stroke:#aad8b0;stroke-width:13.62327099;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:33.60000229;stroke-opacity:1"
        d="m 261.53802,-2163.2642 556.92396,0 c 119.96206,0 216.53802,96.576 216.53802,216.5381 l 1163.4396,437.1876 -1163.4396,113.4576 0,795.62999 0,673.137595 0,673.137595 c 0,119.96207 -96.57596,216.53802 -216.53802,216.53802 l -556.92396,0 C 141.57596,962.3623 45,865.78635 45,745.82428 l 0,-2692.55038 c 0,-119.9621 96.57596,-216.5381 216.53802,-216.5381 z"
        id="rect240363"
        inkscape:connector-curvature="0"
@@ -1932,10 +1989,9 @@
            style="font-size:70px;fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /></flowRegion><flowPara
          id="flowPara175764"></flowPara></flowRoot>    <path
        style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:11.78999996;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:33.60000229;stroke-opacity:1"
-       d="m 1598.4958,4134.3959 0,-46.2145 10.2019,0 c 20.8666,1e-4 31.3582,2.844 39.043,10.5834 9.4246,9.4914 10.6862,25.0981 2.9624,36.6461 -6.7258,10.0559 -16.9127,14.5142 -35.0347,15.3331 l -7.0711,0.3195 -0.1339,14.7734 -0.1339,14.7735 -4.9169,0 -4.9168,-10e-5 0,-46.2144 z m 24.4962,8.2779 c 10.2428,-1.5007 17.8192,-6.7885 20.7241,-14.464 0.6303,-1.6653 1.2116,-4.6297 1.3621,-6.9458 0.6532,-10.0543 -3.6193,-17.7659 -12.1768,-21.9788 -4.8455,-2.3854 -7.9728,-3.0193 -16.6017,-3.3649 l -7.9549,-0.3186 0,23.7324 c 0,13.0528 0.1695,23.9019 0.3768,24.1092 0.4304,0.4304 9.3707,-0.052 14.2704,-0.7695 z"
+       d="m 1591.3729,866.7581 0,-46.2145 10.2019,0 c 20.8666,10e-5 31.3582,2.844 39.043,10.5834 9.4246,9.4914 10.6862,25.0981 2.9624,36.6461 -6.7258,10.0559 -16.9127,14.5142 -35.0347,15.3331 l -7.0711,0.3195 -0.1339,14.7734 -0.1339,14.7735 -4.9169,0 -4.9168,-1e-4 0,-46.2144 z m 24.4962,8.2779 c 10.2428,-1.5007 17.8192,-6.7885 20.7241,-14.464 0.6303,-1.6653 1.2116,-4.6297 1.3621,-6.9458 0.6532,-10.0543 -3.6193,-17.7659 -12.1768,-21.9788 -4.8455,-2.3854 -7.9728,-3.0193 -16.6017,-3.3649 l -7.9549,-0.3186 0,23.7324 c 0,13.0528 0.1695,23.9019 0.3768,24.1092 0.4304,0.4304 9.3707,-0.052 14.2704,-0.7695 z"
        id="path186784"
-       inkscape:connector-curvature="0"
-       transform="translate(0,-3267.6378)" />
+       inkscape:connector-curvature="0" />
     <rect
        style="opacity:1;fill:#96ceb4;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:33.60000229;stroke-opacity:1"
        id="rect197036"
@@ -72237,31 +72293,31 @@
          sodipodi:role="line">b</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:100%;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, ';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="1080"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:100%;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, ';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       x="1620.4785"
        y="-427.75238"
        id="text197082"
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan197084"
-         x="1080"
+         x="1086.0107"
          y="-427.75238"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70px;line-height:100%;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, '">Minimum Spanning Networks</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70px;line-height:100%;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, ';text-anchor:middle;text-align:center;">Minimum Spanning Networks</tspan><tspan
          sodipodi:role="line"
-         x="1080"
+         x="1086.0107"
          y="-357.75238"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70px;line-height:100%;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, '"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70px;line-height:100%;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, ';text-anchor:middle;text-align:center;"
          id="tspan197086">with filtered MLGs</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:125%;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, ';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="1083.0975"
+       x="1095.769"
        y="297.02768"
        id="text197088"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan197090"
-         x="1083.0975"
+         x="1095.769"
          y="297.02768"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70px;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, '">Index of Association for SNPs</tspan></text>
     <text
@@ -72302,54 +72358,50 @@
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;writing-mode:lr-tb;text-anchor:start;fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /></flowRegion><flowPara
          id="flowPara217695">Knowledge of the population dynamics and evolution of plant pathogens allows inferences on evolutionary processes involved in their adaptation to hosts, pesticides, and other environmental pressures. With the advent of high-throughput sequencing technologies, obtaining genome-wide data has become easier and cheaper than ever before with techniques such as genotyping-by-sequencing (GBS). </flowPara><flowPara
          id="flowPara217697"></flowPara><flowPara
-         id="flowPara217699">We present here an overview of the R package poppr as it pertains to traditional and high-throughput population genetic data with select applications.</flowPara></flowRoot>    <g
-       id="g217990"
-       transform="translate(0,122)">
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:125%;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, ';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         x="1080"
-         y="-2562.3535"
-         id="text197070"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           id="tspan197072"
-           x="1080"
-           y="-2562.3535"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70px;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, '">Genotype Accumulation Curve</tspan></text>
-      <flowRoot
-         xml:space="preserve"
-         id="flowRoot217904"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         transform="translate(944.3856,-3217.7779)"><flowRegion
-           id="flowRegion217906"><rect
-             id="rect217908"
-             width="1080.5345"
-             height="459.61893"
-             x="135"
-             y="675"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;writing-mode:lr-tb;text-anchor:start;fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /></flowRegion><flowPara
-           id="flowPara218348">One recent addition to poppr is the genotype accumulation curve (GAC). When starting analysis with a handful of markers, it's important to check the number of markers you have is sufficient to detect the diversity of mulitlocus genotypes (MLGs). This is visualised by the GAC (S1), which randomly samples n loci from your data (x axis), reporting the number of MLGs observed (y axis).</flowPara></flowRoot>    </g>
-    <text
+         id="flowPara217699">We present here an overview of the R package poppr as it pertains to traditional and high-throughput population genetic data with select applications.</flowPara></flowRoot>    <text
+       sodipodi:linespacing="125%"
+       id="text197070"
+       y="-2440.3535"
+       x="1618.3594"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:125%;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, ';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70px;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, ';text-anchor:middle;text-align:center;"
+         y="-2440.3535"
+         x="1071.7749"
+         id="tspan197072"
+         sodipodi:role="line">Genotype Accumulation Curve</tspan></text>
+    <flowRoot
+       transform="translate(943.71242,-3095.7779)"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="flowRoot217904"
+       xml:space="preserve"><flowRegion
+         id="flowRegion217906"><rect
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;writing-mode:lr-tb;text-anchor:start;fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+           y="675"
+           x="135"
+           height="459.61893"
+           width="1080.5345"
+           id="rect217908" /></flowRegion><flowPara
+         id="flowPara218348">One recent addition to poppr is the genotype accumulation curve (GAC). When starting analysis with a handful of markers, it's important to check the number of markers you have is sufficient to detect the diversity of mulitlocus genotypes (MLGs). This is visualised by the GAC (S1), which randomly samples n loci from your data (x axis), reporting the number of MLGs observed (y axis).</flowPara></flowRoot>    <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70px;line-height:100%;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="1080.2393"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70px;line-height:100%;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       x="1620.2393"
        y="-1181.5665"
        id="text175766"
        sodipodi:linespacing="100%"><tspan
          y="-1181.5665"
-         x="1080.2393"
+         x="1146.4575"
          sodipodi:role="line"
          id="tspan218330">Define Multilocus Lineages</tspan><tspan
          y="-1111.5665"
-         x="1080.2393"
+         x="1146.4575"
          sodipodi:role="line"
          id="tspan218332">by Genetic Distance</tspan></text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot217916"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       transform="translate(944.62484,-1738.508)"><flowRegion
+       transform="translate(944.13242,-1738.508)"><flowRegion
          id="flowRegion217918"><rect
            id="rect217920"
            width="1080.5345"
@@ -72361,16 +72413,16 @@
        sodipodi:linespacing="125%"
        id="text197078"
        y="-1827.0677"
-       x="1078.5743"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:125%;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, ';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="1619.0771"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:125%;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, ';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70px;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, '"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70px;font-family:'Cooper Black';-inkscape-font-specification:'Cooper Black, ';text-anchor:middle;text-align:center;"
          y="-1827.0677"
-         x="1078.5743"
+         x="1144.646"
          id="tspan197080"
          sodipodi:role="line">Flexible bootstrap analysis</tspan></text>
     <flowRoot
-       transform="translate(942.96,-2467.5178)"
+       transform="translate(943.71242,-2467.5178)"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="flowRoot217928"
        xml:space="preserve"><flowRegion
@@ -72385,7 +72437,7 @@
        xml:space="preserve"
        id="flowRoot217940"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       transform="translate(944.3856,-986.8332)"><flowRegion
+       transform="translate(944.13242,-986.8332)"><flowRegion
          id="flowRegion217942"><rect
            id="rect217944"
            width="1080.5345"
@@ -72394,7 +72446,7 @@
            y="675"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;writing-mode:lr-tb;text-anchor:start;fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /></flowRegion><flowPara
          id="flowPara218342">Minimum spanning networks are a useful tool for asessing the population structure of clonal organisms by showing the shortest connections between multilocus genotypes (G3-a, S4-a). New to poppr v2 is the ability to create minimum spanning networks showing connections between MLLs (G3-a, S4-a).  </flowPara></flowRoot>    <flowRoot
-       transform="translate(944.3856,-349.04425)"
+       transform="translate(944.33242,-349.04425)"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="flowRoot217952"
        xml:space="preserve"><flowRegion
@@ -72419,5 +72471,12 @@
            id="rect217968" /></flowRegion><flowPara
          id="flowPara217970">Knowledge of the population dynamics and evolution of plant pathogens allows inferences on evolutionary processes involved in their adaptation to hosts, pesticides, and other environmental pressures. With the advent of high-throughput sequencing technologies, obtaining genome-wide data has become easier and cheaper than ever before with techniques such as genotyping-by-sequencing (GBS). </flowPara><flowPara
          id="flowPara217972"></flowPara><flowPara
-         id="flowPara217974">We present here an overview of the R package poppr as it pertains to traditional and high-throughput population genetic data with select applications.</flowPara></flowRoot>  </g>
+         id="flowPara217974">We present here an overview of the R package poppr as it pertains to traditional and high-throughput population genetic data with select applications.</flowPara></flowRoot>    <rect
+       style="opacity:1;fill:url(#radialGradient240440);fill-opacity:1;fill-rule:nonzero;stroke:#96ceb4;stroke-width:4.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:33.60000229;stroke-opacity:1"
+       id="rect240432"
+       width="195.16147"
+       height="164.04877"
+       x="964.31116"
+       y="-3788.0066" />
+  </g>
 </svg>
