@@ -24,7 +24,9 @@ data with select applications.
 
 ## Poster
 
-The poster is located here: [poster/znk-aps-2016-poster.svg](poster/znk-aps-2016-poster.svg). This is an [Inkscape](https://inkscape.org/) SVG file.
+**The pdf version of the poster can be found at [poster/znk-aps-2016-poster.pdf](poster/znk-aps-2016-poster.pdf)**
+
+The source for the poster is located here: [poster/znk-aps-2016-poster.svg](poster/znk-aps-2016-poster.svg). This is an [Inkscape](https://inkscape.org/) SVG file.
 
 The fonts utilized are: 
 
