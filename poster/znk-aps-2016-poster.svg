@@ -1464,45 +1464,17 @@
          result="composite"
          id="feComposite15053" />
     </filter>
-    <filter
-       inkscape:collect="always"
-       style="color-interpolation-filters:sRGB"
-       id="filter43441"
-       x="-0.065832116"
-       width="1.1316642"
-       y="-0.065832116"
-       height="1.1316642">
-      <feGaussianBlur
-         inkscape:collect="always"
-         stdDeviation="36.959762"
-         id="feGaussianBlur43443" />
-    </filter>
-    <filter
-       inkscape:collect="always"
-       style="color-interpolation-filters:sRGB"
-       id="filter43445"
-       x="-0.072867617"
-       width="1.1457351"
-       y="-0.072867617"
-       height="1.1457351">
-      <feGaussianBlur
-         inkscape:collect="always"
-         stdDeviation="36.959762"
-         id="feGaussianBlur43447" />
-    </filter>
-    <filter
-       inkscape:collect="always"
-       style="color-interpolation-filters:sRGB"
-       id="filter43449"
-       x="-0.061850913"
-       width="1.1237018"
-       y="-0.061850913"
-       height="1.1237018">
-      <feGaussianBlur
-         inkscape:collect="always"
-         stdDeviation="36.959762"
-         id="feGaussianBlur43451" />
-    </filter>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath34600">
+      <rect
+         style="opacity:1;fill:#d9ede4;fill-opacity:0.82352941;stroke:none;stroke-width:9.60000038;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:38.40000153, 9.60000038;stroke-dashoffset:33.60000229;stroke-opacity:1"
+         id="rect34602"
+         width="3150.9463"
+         height="4230.043"
+         x="44.526768"
+         y="-3222.5947" />
+    </clipPath>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -1512,10 +1484,10 @@
      inkscape:pageopacity="0.94117647"
      inkscape:pageshadow="2"
      inkscape:zoom="0.32283951"
-     inkscape:cx="1413.2836"
-     inkscape:cy="2187.3969"
+     inkscape:cx="2757.982"
+     inkscape:cy="2240.2117"
      inkscape:document-units="in"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g240401"
      showgrid="false"
      units="in"
      inkscape:window-width="1200"
@@ -1523,7 +1495,7 @@
      inkscape:window-x="1280"
      inkscape:window-y="1"
      inkscape:window-maximized="1"
-     showguides="false"
+     showguides="true"
      inkscape:guide-bbox="true"
      guidecolor="#0000ff"
      guideopacity="0.21568627"
@@ -1624,7 +1596,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1636,9 +1608,10 @@
     <g
        transform="translate(0,3267.6378)"
        style="display:inline"
-       id="g43453">
+       id="g43453"
+       clip-path="url(#clipPath34600)">
       <circle
-         style="display:inline;opacity:0.34000017;fill:#ffcc5c;fill-opacity:1;stroke:none;stroke-width:2.78999996;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:11.16, 2.79;stroke-dashoffset:3.27603602;stroke-opacity:1;filter:url(#filter43449)"
+         style="display:inline;opacity:1;fill:#ffebbe;fill-opacity:1;stroke:none;stroke-width:2.78999996;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:11.16, 2.79000000000000004;stroke-dashoffset:3.27603602;stroke-opacity:1"
          id="circle14381"
          cx="1620"
          cy="-2557.6377"
@@ -1648,13 +1621,13 @@
          cy="-573.89001"
          cx="617.38043"
          id="circle14383"
-         style="display:inline;opacity:0.34000017;fill:#ff6f69;fill-opacity:1;stroke:none;stroke-width:2.78999996;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:11.16, 2.79;stroke-dashoffset:3.27603602;stroke-opacity:1;filter:url(#filter43445)" />
+         style="display:inline;opacity:1;fill:#ffcac8;fill-opacity:1;stroke:none;stroke-width:2.78999996;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:11.16, 2.79000000000000004;stroke-dashoffset:3.27603602;stroke-opacity:1" />
       <circle
          r="673.70935"
          cy="549.53748"
          cx="2229.0029"
          id="path14379"
-         style="display:inline;opacity:0.34000017;fill:#97ceb4;fill-opacity:0.82352941;stroke:none;stroke-width:2.78999996;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:11.16, 2.79;stroke-dashoffset:3.27603602;stroke-opacity:1;filter:url(#filter43441)" />
+         style="display:inline;opacity:1;fill:#d9ede4;fill-opacity:0.82352942;stroke:none;stroke-width:2.78999996;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:11.16, 2.79000000000000004;stroke-dashoffset:3.27603602;stroke-opacity:1" />
       <rect
          y="-2727.6377"
          x="2250"
@@ -2311,7 +2284,7 @@
        cy="-3093.9309"
        r="0" />
     <g
-       id="g43536">
+       id="g24902">
       <rect
          id="rect105128"
          style="fill:#ffffff;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
@@ -36640,11 +36613,10 @@
              style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50px;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic Bold';fill:#ff6f69;fill-opacity:1;stroke:#000000;stroke-opacity:1">S1</tspan></text>
       </g>
       <g
-         transform="translate(10,0)"
-         id="g18638">
+         id="g24410">
         <g
            id="g140365"
-           transform="matrix(1.2380953,0,0,1.2380953,2613.385,536.02331)">
+           transform="matrix(1.2380953,0,0,1.2380953,2517.385,516.02331)">
           <polyline
              transform="translate(-211.42852,-1944.7587)"
              points="281.56,91.52 281.56,91.52 "
@@ -39542,7 +39514,7 @@
         </g>
         <g
            id="g229837"
-           transform="translate(9.526919,92.259374)">
+           transform="translate(599.52692,112.25937)">
           <g
              transform="matrix(1.6506189,0,0,1.6506189,1293.8732,-2012.1962)"
              clip-path="url(#cp4)"
@@ -39658,12 +39630,12 @@
            sodipodi:linespacing="125%"
            id="text229899"
            y="-1484.7323"
-           x="2246.3479"
+           x="2256.3479"
            style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Bold';text-align:justify;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ff6f69;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
            xml:space="preserve"><tspan
              id="tspan229901"
              sodipodi:role="line"
-             x="2246.3479"
+             x="2256.3479"
              y="-1484.7323">S2</tspan></text>
       </g>
       <g
@@ -72679,7 +72651,7 @@
                y="675"
                style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:110.00000238%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;writing-mode:lr-tb;text-anchor:start;fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /></flowRegion><flowPara
              id="flowPara13398">Knowledge of the population dynamics and evolution of plant pathogens allows inferences on evolutionary processes involved in their adaptation to hosts, pesticides, and other environmental pressures. With the advent of high-throughput sequencing technologies, obtaining genome-wide data has become easier and cheaper than ever before with techniques such as genotyping-by-sequencing (GBS). </flowPara><flowPara
-             id="flowPara13400"></flowPara><flowPara
+             id="flowPara13400" /><flowPara
              id="flowPara13402">We present here an overview of the <flowSpan
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic Bold'"
    id="flowSpan13404">novel tools in the R package poppr</flowSpan> as it pertains to traditional and high-throughput population genetic data with select applications (Kamvar et al., 2015).</flowPara></flowRoot>      </g>
@@ -72709,7 +72681,7 @@
                height="459.61893"
                width="1080.5345"
                id="rect217908" /></flowRegion><flowPara
-             id="flowPara13410">One recent addition to poppr is the genotype accumulation curve (GAC). When starting analysis with a handful of markers, its important to check that the number of markers you have is sufficient to encompass the diversity of mulitlocus genotypes (MLGs). This is visualised by the GAC (S1), which randomly samples n loci from your data (x axis), reporting the number of MLGs observed (y axis).</flowPara></flowRoot>      </g>
+             id="flowPara13410">One recent addition to poppr is the genotype accumulation curve (GAC). When starting analysis with a handful of markers, it's important to check that the number of markers you have is sufficient to encompass the diversity of mulitlocus genotypes (MLGs). This is visualised by the GAC (S1), which randomly samples n loci from your data (x axis), reporting the number of MLGs observed (y axis).</flowPara></flowRoot>      </g>
       <g
          id="g14265">
         <text
@@ -72808,7 +72780,7 @@
                x="135"
                y="675"
                style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic, Normal';text-align:justify;writing-mode:lr-tb;text-anchor:start;fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /></flowRegion><flowPara
-             id="flowPara218342">Minimum spanning networks are a useful tool for asessing the population structure of clonal organisms by showing the shortest connections between multilocus genotypes (G3-a, S4-a). <flowSpan
+             id="flowPara218342">Minimum spanning networks are a useful tool for assessing the population structure of clonal organisms by showing the shortest connections between multilocus genotypes (G3-a, S4-a). <flowSpan
    style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic Semi-Bold'"
    id="flowSpan13422">New to poppr v2 is the ability to create minimum spanning networks showing connections between MLLs</flowSpan> (G3-a, S4-a).  </flowPara></flowRoot>      </g>
       <g
@@ -72839,7 +72811,7 @@
                id="rect217956" /></flowRegion><flowPara
              id="flowPara13369">The index of association (and it's standardized form) is a measure of mutlilocus linkage disequilibrium, which can serve as a metric for clonality. It was initially implemented for traditional markers such as AFLP or SSR, but with high-throughput sequencing technologies like GBS, assessing linkage across thousands of loci became computationally intensive. <flowSpan
    style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-family:'Nanum Gothic';-inkscape-font-specification:'Nanum Gothic Semi-Bold'"
-   id="flowSpan13420">We have created a unique method for quickly asessing the clonality of populations by sampling SNPs within a sliding window or randomly.</flowSpan> Fig. G4 was generated by randomly sampling 500 SNPs 1000 times over each population showing that the CA samples have a strong signal of clonal reproduction.</flowPara></flowRoot>      </g>
+   id="flowSpan13420">We have created a unique method for quickly assessing the clonality of populations by sampling SNPs within a sliding window or randomly.</flowSpan> Fig. G4 was generated by randomly sampling 500 SNPs 1000 times over each population showing that the CA samples have a strong signal of clonal reproduction.</flowPara></flowRoot>      </g>
       <g
          id="g14360">
         <g
@@ -73009,5 +72981,5 @@
            x="1635.4875"
            y="1721.1854"
            style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /></flowRegion><flowPara
-         id="flowPara13440"></flowPara></flowRoot>  </g>
+         id="flowPara13440" /></flowRoot>  </g>
 </svg>
